@@ -1,0 +1,134 @@
+name: Publish verified research companion v1
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-v1.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-connectedness-v1
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out the public companion repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Download and verify the approved scientific package
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path, PurePosixPath
+          from concurrent.futures import ThreadPoolExecutor
+          import hashlib, os, shutil, stat, subprocess, zipfile
+          urls = [
+              'https://at.adobe.com/zoonqbNGNAVuR2tD',
+              'https://at.adobe.com/JZGFPcOxX00zs4eO',
+              'https://at.adobe.com/wY0kCeo76JjqhKCp',
+              'https://at.adobe.com/QwbLSs1ddGpZyI3B',
+              'https://at.adobe.com/RhN8Ln9gAdWVdn8l',
+              'https://at.adobe.com/QLKK6UyuF7hEsw5k',
+              'https://at.adobe.com/WlMZu8KDARfv5OK7',
+              'https://at.adobe.com/Sca7VVuUocjRC7k9',
+              'https://at.adobe.com/jKEeYvelagnPX1wg',
+              'https://at.adobe.com/E5j0f4Ih3AAjp2ga',
+              'https://at.adobe.com/xStvwK9IxOgy6dCt',
+          ]
+          temp = Path(os.environ['RUNNER_TEMP']) / 'approved-release'
+          temp.mkdir(exist_ok=True)
+          def download(item):
+              i, url = item
+              path = temp / f'transfer-{i:02d}.zip'
+              subprocess.run(['curl','--fail','--location','--silent','--show-error','--retry','3','--max-time','180',url,'--output',str(path)], check=True)
+              with zipfile.ZipFile(path) as z:
+                  expected = f'payload.part{i:02d}'
+                  assert z.namelist() == [expected], 'Unexpected transport content'
+                  data = z.read(expected)
+                  assert len(data) <= 12 * 1024 * 1024
+              return data
+          with ThreadPoolExecutor(max_workers=4) as pool:
+              parts = list(pool.map(download, enumerate(urls, 1)))
+          data = b''.join(parts)
+          assert len(data) == 135176270, 'Unexpected package length'
+          assert hashlib.sha256(data).hexdigest() == '5e91f8773baf7745c095d9be181f286a45079eb86a2fdc4d9fb7264d40ee02a7', 'Package hash mismatch'
+          package = temp / 'Connectedness_Atlas_Reproducibility.zip'
+          package.write_bytes(data)
+          stage = temp / 'source'
+          blocked = {'.ttf','.otf','.woff','.woff2','.ttc','.pfa','.pfb'}
+          with zipfile.ZipFile(package) as z:
+              assert sum(i.file_size for i in z.infolist()) < 250_000_000
+              for entry in z.infolist():
+                  p = PurePosixPath(entry.filename)
+                  assert not p.is_absolute() and '..' not in p.parts and '\\' not in entry.filename
+                  assert '.git' not in p.parts and '.github' not in p.parts
+                  assert not stat.S_ISLNK(entry.external_attr >> 16)
+                  assert p.suffix.lower() not in blocked
+              z.extractall(stage)
+          listed = set()
+          for line in (stage/'MANIFEST.sha256').read_text().splitlines():
+              digest, name = line.split('  ', 1)
+              p = stage / name
+              assert p.is_file() and hashlib.sha256(p.read_bytes()).hexdigest() == digest, name
+              listed.add(name)
+          actual = {p.relative_to(stage).as_posix() for p in stage.rglob('*') if p.is_file() and p.name != 'MANIFEST.sha256'}
+          assert listed == actual and len(listed) == 209, 'Manifest coverage mismatch'
+          for name in sorted(actual | {'MANIFEST.sha256'}):
+              target = Path(name)
+              target.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copy2(stage/name, target)
+          print('Verified and installed 209 manifest-listed files; no font files or private working archive.')
+          PY
+      - name: Check the exact finite records
+        run: python3 tools/check_release.py
+      - name: Commit the frozen public source tree
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --all
+          if ! git diff --cached --quiet; then
+            git commit -m 'Release the connectedness loci manuscript and reproducible atlas v1.0.0'
+            git push origin HEAD:main
+          fi
+      - name: Prepare downloadable publication assets
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, os, shutil, zipfile
+          assets = Path(os.environ['RUNNER_TEMP'])/'publication-assets'
+          assets.mkdir(exist_ok=True)
+          for name in ('Four_Dimensional_Connectedness_Loci.pdf','BMD2026_Poster.pdf','Zipper_Stable_Slices.pdf'):
+              shutil.copy2(Path('publications')/name, assets/name)
+          shutil.copy2('interactive/Four_Family_Stable_Atlas.html',assets/'Four_Family_Stable_Atlas.html')
+          shutil.copy2('ARXIV_SUBMISSION.md',assets/'ARXIV_SUBMISSION.md')
+          shutil.copy2(Path(os.environ['RUNNER_TEMP'])/'approved-release/Connectedness_Atlas_Reproducibility.zip',assets/'Connectedness_Atlas_Reproducibility.zip')
+          for folder, filename in [('manuscript','Four_Dimensional_Connectedness_Loci_arXiv_source.zip'),('poster','BMD2026_Poster_Source.zip')]:
+              with zipfile.ZipFile(assets/filename,'w',zipfile.ZIP_DEFLATED,compresslevel=8) as z:
+                  for p in sorted(Path(folder).rglob('*')):
+                      if p.is_file(): z.write(p,p.relative_to(folder).as_posix())
+          lines = [f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.name}' for p in sorted(assets.iterdir()) if p.is_file() and p.name!='SHA256SUMS']
+          (assets/'SHA256SUMS').write_text('\n'.join(lines)+'\n')
+          PY
+      - name: Publish the author-release record and checked assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view v1.0.0 >/dev/null 2>&1; then
+            test "$(gh release view v1.0.0 --json isDraft --jq .isDraft)" = true || { echo 'A published v1.0.0 already exists; refusing to replace it.'; exit 1; }
+          else
+            gh release create v1.0.0 --target "$(git rev-parse HEAD)" --title 'Connectedness loci and structural stability — research companion 1.0.0' --notes-file RELEASE_NOTES.md --draft
+          fi
+          gh release upload v1.0.0 "$RUNNER_TEMP/publication-assets/"* --clobber
+          gh release edit v1.0.0 --draft=false
+          gh release view v1.0.0 --json url,tagName,publishedAt,assets
