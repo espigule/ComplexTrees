@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "exact_return_identities": 14,
+  "exact_centre_identities": 24,
+  "exact_triangle_vertex_identities": 2,
+  "rows": [
+    {
+      "plane": "DD",
+      "signature": "01",
+      "U": "12",
+      "V": "22",
+      "r": "1",
+      "s": "1",
+      "identity": "symbolically verified",
+      "eta_polynomial": "{'(1, 0)': '1'}"
+    },
+    {
+      "plane": "DD",
+      "signature": "10",
+      "U": "11",
+      "V": "21",
+      "r": "2",
+      "s": "2",
+      "identity": "symbolically verified",
+      "eta_polynomial": "{'(0, 0)': '1', '(1, 0)': '-1'}"
+    },
+    {
+      "plane": "DD",
+      "signature": "11",
+      "U": "1",
+      "V": "2",
+      "r": "12",
+      "s": "21",
+      "identity": "symbolically verified",
+      "eta_polynomial": "{'(1, 0)': '1', '(2, 0)': '-1'}"
+    },
+    {
+      "plane": "DO",
+      "signature": "10",
+      "U": "11",
+      "V": "21",
+      "r": "22",
+      "s": "22",
+      "identity": "symbolically verified",
+      "eta_polynomial": "{'(0, 0)': '1', '(0, 1)': '-1', '(1, 0)': '-1', '(1, 1)': '1'}"
+    },
+    {
+      "plane": "DO",
+      "signature": "11",
+      "U": "1",
+      "V": "2",
+      "r": "1212",
+      "s": "2121",
+      "identity": "symbolically verified",
+      "eta_polynomial": "{'(1, 1)': '1', '(1, 2)': '-1', '(2, 1)': '-1', '(2, 2)': '1'}"
+    },
+    {
+      "plane": "OO",
+      "signature": "01",
+      "U": "12",
+      "V": "22",
+      "r": "11",
+      "s": "11",
+      "identity": "symbolically verified",
+      "eta_polynomial": "{'(1, 1)': '1'}"
+    },
+    {
+      "plane": "OO",
+      "signature": "10",
+      "U": "11",
+      "V": "21",
+      "r": "22",
+      "s": "22",
+      "identity": "symbolically verified",
+      "eta_polynomial": "{'(0, 0)': '1', '(0, 1)': '-1', '(1, 0)': '-1', '(1, 1)': '1'}"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "rational-disconnection/2",
+  "verifier_version": "2.0.0",
+  "input": {
+    "multipliers": [
+      [
+        "3/8",
+        "3/8"
+      ],
+      [
+        "3/8",
+        "3/8"
+      ]
+    ],
+    "orientation": [
+      1,
+      1
+    ]
+  },
+  "input_sha256": "3a2f2efc7e6b366f6073c6ce48d73d09d35afcd28e08c0d618b0d98a90bc8782",
+  "arithmetic": "exact rational; rational outward norm bound",
+  "claim_scope": "rational centre and, on success, the explicit product of complex parameter disks",
+  "status": "certified-disconnected",
+  "connectedness_certified": false,
+  "disconnection_certified": true,
+  "max_depth": 3,
+  "max_pairs": 1000,
+  "enclosing_radius": "1208925819614629174706176/567796085863872263404769",
+  "norm_upper_bounds": [
+    "641129733750756911301407/1208925819614629174706176",
+    "641129733750756911301407/1208925819614629174706176"
+  ],
+  "tested_pairs": 5,
+  "pruned_pairs": 4,
+  "depth_reached": 2,
+  "reason": "all first-level cylinder pairs strictly separated",
+  "minimum_squared_margin": "81352876312771083542898605525064394002712505895712373237953883485257044104904962334421914252415/117794253333580563521105626878229703667035096328739341434382267062454914830304095254728182595584",
+  "contact_gap_lower_bound": "81352876312771083542898605525064394002712505895712373237953883485257044104904962334421914252415/312789400377318854792379530169936976513050490538700912920741633570425131773675861012718196621312",
+  "separation_cover": {
+    "alphabet": "-+",
+    "composition": "outermost first",
+    "leaves": [
+      [
+        "--",
+        "+-"
+      ],
+      [
+        "--",
+        "++"
+      ],
+      [
+        "-+",
+        "+-"
+      ],
+      [
+        "-+",
+        "++"
+      ]
+    ]
+  },
+  "parameter_neighbourhood": {
+    "metric": "max(|lambda_minus-mu_minus|, |lambda_plus-mu_plus|)",
+    "closed_radius": "46191844744159150131667531902500846936694847155746574113182816618548565280638052202596291347792037356442323075180767135/12881870295972461908786539996976577419886815135207294925281626574645210890423873531927366488113733983021564471587444359168",
+    "contraction_upper_bound": "1850055553365386086007583/2417851639229258349412352",
+    "contact_gap_lower_bound": "81352876312771083542898605525064394002712505895712373237953883485257044104904962334421914252415/625578800754637709584759060339873953026100981077401825841483267140850263547351722025436393242624",
+    "orientation": [
+      1,
+      1
+    ],
+    "claim": "Every parameter in this closed product of complex disks is disconnected."
+  }
+}

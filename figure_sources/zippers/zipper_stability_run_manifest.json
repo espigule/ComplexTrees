@@ -1,0 +1,561 @@
+{
+  "compile_command": [
+    "g++",
+    "-O2",
+    "-std=c++17",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "certify_zipper_cells.cpp",
+    "-o",
+    "certify_zipper_cells"
+  ],
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "floating_environment": {
+    "binary64": "IEEE754 doubles, round-to-nearest arithmetic, no fast-math or fused contraction; nextafter widens each elementary bound by one representable step",
+    "sqrt": "IEC60559 correctly rounded binary64 square root, widened with nextafter",
+    "subnormals": "Gradual underflow assumed; no flush-to-zero compiler flags",
+    "strict_positive_separation": "Outward lower bound on squared center distance exceeds outward upper bound on squared radiussum. minimum_squared_gap is the minimum discarded-leaf margin, not distance between first-level pieces."
+  },
+  "commands": [
+    {
+      "output": "DD01_cells.csv",
+      "command": [
+        "./certify_zipper_cells",
+        "DD01",
+        "DD01_cells.csv",
+        "512",
+        "12000",
+        "40"
+      ],
+      "purpose": "Main grid: exact dyadic rectangles, 512 by256 over [0,1]\u00d7[0,1/2]",
+      "coefficients": "Exact dyadic cellendpoints; outward intervals cover the entire closed parametercell"
+    },
+    {
+      "output": "DD10_cells.csv",
+      "command": [
+        "./certify_zipper_cells",
+        "DD10",
+        "DD10_cells.csv",
+        "512",
+        "12000",
+        "40"
+      ],
+      "purpose": "Main grid: exact dyadic rectangles, 512 by256 over [0,1]\u00d7[0,1/2]",
+      "coefficients": "Exact dyadic cellendpoints; outward intervals cover the entire closed parametercell"
+    },
+    {
+      "output": "DD11_cells.csv",
+      "command": [
+        "./certify_zipper_cells",
+        "DD11",
+        "DD11_cells.csv",
+        "512",
+        "12000",
+        "40"
+      ],
+      "purpose": "Main grid: exact dyadic rectangles, 512 by256 over [0,1]\u00d7[0,1/2]",
+      "coefficients": "Exact dyadic cellendpoints; outward intervals cover the entire closed parametercell"
+    },
+    {
+      "output": "DO10_cells.csv",
+      "command": [
+        "./certify_zipper_cells",
+        "DO10",
+        "DO10_cells.csv",
+        "512",
+        "12000",
+        "40"
+      ],
+      "purpose": "Main grid: exact dyadic rectangles, 512 by256 over [0,1]\u00d7[0,1/2]",
+      "coefficients": "Exact dyadic cellendpoints; outward intervals cover the entire closed parametercell"
+    },
+    {
+      "output": "DO11_cells.csv",
+      "command": [
+        "./certify_zipper_cells",
+        "DO11",
+        "DO11_cells.csv",
+        "512",
+        "12000",
+        "40"
+      ],
+      "purpose": "Main grid: exact dyadic rectangles, 512 by256 over [0,1]\u00d7[0,1/2]",
+      "coefficients": "Exact dyadic cellendpoints; outward intervals cover the entire closed parametercell"
+    },
+    {
+      "output": "OO01_cells.csv",
+      "command": [
+        "./certify_zipper_cells",
+        "OO01",
+        "OO01_cells.csv",
+        "512",
+        "12000",
+        "40"
+      ],
+      "purpose": "Main grid: exact dyadic rectangles, 512 by256 over [0,1]\u00d7[0,1/2]",
+      "coefficients": "Exact dyadic cellendpoints; outward intervals cover the entire closed parametercell"
+    },
+    {
+      "output": "OO10_cells.csv",
+      "command": [
+        "./certify_zipper_cells",
+        "OO10",
+        "OO10_cells.csv",
+        "512",
+        "12000",
+        "40"
+      ],
+      "purpose": "Main grid: exact dyadic rectangles, 512 by256 over [0,1]\u00d7[0,1/2]",
+      "coefficients": "Exact dyadic cellendpoints; outward intervals cover the entire closed parametercell"
+    },
+    {
+      "output": "DD01_specimen.csv",
+      "command": [
+        "./certify_zipper_cells",
+        "DD01",
+        "DD01_specimen.csv",
+        "1",
+        "500000",
+        "60",
+        "0.375",
+        "0.375",
+        "0.25",
+        "0.25"
+      ],
+      "purpose": "Exact specimenpoint q*=3/8+i/4, not a surroundingopenrectangle"
+    },
+    {
+      "output": "DD10_specimen.csv",
+      "command": [
+        "./certify_zipper_cells",
+        "DD10",
+        "DD10_specimen.csv",
+        "1",
+        "500000",
+        "60",
+        "0.375",
+        "0.375",
+        "0.25",
+        "0.25"
+      ],
+      "purpose": "Exact specimenpoint q*=3/8+i/4, not a surroundingopenrectangle"
+    },
+    {
+      "output": "DD11_specimen.csv",
+      "command": [
+        "./certify_zipper_cells",
+        "DD11",
+        "DD11_specimen.csv",
+        "1",
+        "500000",
+        "60",
+        "0.375",
+        "0.375",
+        "0.25",
+        "0.25"
+      ],
+      "purpose": "Exact specimenpoint q*=3/8+i/4, not a surroundingopenrectangle"
+    },
+    {
+      "output": "DO10_specimen.csv",
+      "command": [
+        "./certify_zipper_cells",
+        "DO10",
+        "DO10_specimen.csv",
+        "1",
+        "500000",
+        "60",
+        "0.375",
+        "0.375",
+        "0.25",
+        "0.25"
+      ],
+      "purpose": "Exact specimenpoint q*=3/8+i/4, not a surroundingopenrectangle"
+    },
+    {
+      "output": "DO11_specimen.csv",
+      "command": [
+        "./certify_zipper_cells",
+        "DO11",
+        "DO11_specimen.csv",
+        "1",
+        "500000",
+        "60",
+        "0.375",
+        "0.375",
+        "0.25",
+        "0.25"
+      ],
+      "purpose": "Exact specimenpoint q*=3/8+i/4, not a surroundingopenrectangle"
+    },
+    {
+      "output": "OO01_specimen.csv",
+      "command": [
+        "./certify_zipper_cells",
+        "OO01",
+        "OO01_specimen.csv",
+        "1",
+        "500000",
+        "60",
+        "0.375",
+        "0.375",
+        "0.25",
+        "0.25"
+      ],
+      "purpose": "Exact specimenpoint q*=3/8+i/4, not a surroundingopenrectangle"
+    },
+    {
+      "output": "OO10_specimen.csv",
+      "command": [
+        "./certify_zipper_cells",
+        "OO10",
+        "OO10_specimen.csv",
+        "1",
+        "500000",
+        "60",
+        "0.375",
+        "0.375",
+        "0.25",
+        "0.25"
+      ],
+      "purpose": "Exact specimenpoint q*=3/8+i/4, not a surroundingopenrectangle"
+    },
+    {
+      "output": "DD11_island_point.csv",
+      "command": [
+        "./certify_zipper_cells",
+        "DD11",
+        "DD11_island_point.csv",
+        "1",
+        "5000000",
+        "90",
+        "0.34090874998946674",
+        "0.34090875001857057",
+        "0.43484624999109656",
+        "0.43484625002020039"
+      ],
+      "purpose": "Whole dyadicrectangle containing exact rational L=0.34090875+0.43484625i",
+      "endpoints_hex": [
+        "0x1.5d172ef080000p-2",
+        "0x1.5d172ef100000p-2",
+        "0x1.bd4855da00000p-2",
+        "0x1.bd4855da80000p-2"
+      ]
+    },
+    {
+      "output": "DD11_island_cell_26.csv",
+      "command": [
+        "./certify_zipper_cells",
+        "DD11",
+        "DD11_island_cell_26.csv",
+        "1",
+        "500000",
+        "60",
+        "0.34090873599052429",
+        "0.34090875089168549",
+        "0.43484623730182648",
+        "0.43484625220298767"
+      ],
+      "purpose": "Whole dyadicrectangle containing exact rational L=0.34090875+0.43484625i",
+      "endpoints_hex": [
+        "0x1.5d172e0000000p-2",
+        "0x1.5d172f0000000p-2",
+        "0x1.bd48550000000p-2",
+        "0x1.bd48560000000p-2"
+      ]
+    },
+    {
+      "output": "DD11_island_zoom.csv",
+      "command": [
+        "./certify_zipper_cells",
+        "DD11",
+        "DD11_island_zoom.csv",
+        "64",
+        "150000",
+        "64",
+        "0.3409082591533661",
+        "0.3409092128276825",
+        "0.4348457604646683",
+        "0.4348467141389847"
+      ],
+      "purpose": "Fine certified neighborhood about L; all4096dyadic cells pass. This small square is not a picture of the complete island boundary.",
+      "endpoints_hex": [
+        "0x1.5d170e0000000p-2",
+        "0x1.5d174e0000000p-2",
+        "0x1.bd48350000000p-2",
+        "0x1.bd48750000000p-2"
+      ]
+    }
+  ],
+  "render_command": [
+    "python",
+    "build_zipper_stability_figures.py"
+  ],
+  "symmetry": {
+    "DD01": "raw DD01 union horizontal reflection ofraw DD10",
+    "DD10": "horizontal reflection ofcompleted DD01",
+    "OO01": "raw OO01 union horizontal reflection ofraw OO10",
+    "OO10": "horizontal reflection ofcompleted OO01",
+    "map": "q -> 1-conjugate(q); underlying endpoint reflection and complexconjugation are exact symmetries."
+  },
+  "files": {
+    "DD01_cells.csv": {
+      "bytes": 7608819,
+      "sha256": "d84f9380cdac422ff8f0f7b57f0c435d4d8ec485c671e9cec03b2e897ddde335"
+    },
+    "DD01_coarse.csv": {
+      "bytes": 89290,
+      "sha256": "519f5b50b02c7593b9940edad4888439827ca6f91223239c633e2c7d687155d8"
+    },
+    "DD01_mask.npy": {
+      "bytes": 131200,
+      "sha256": "2176eb0d28844aacf89103f5d38938bcdcd326b5e52e9bd7bc38a8dac2d13b7e"
+    },
+    "DD01_specimen.csv": {
+      "bytes": 114,
+      "sha256": "7db957fcef2e38e005a1b40ae7e55ecd8ba19f3c552d0361f9b1dc996b3ceef4"
+    },
+    "DD10_cells.csv": {
+      "bytes": 7485659,
+      "sha256": "588a17db4dea921e4ddf4d0f9e3ecb3f738e18ab8f708bde2c8f541a55b501f3"
+    },
+    "DD10_mask.npy": {
+      "bytes": 131200,
+      "sha256": "364e8eff89cdb90f77440c31b15c4ea73e497c424bdd0909c4da3b498658a4f3"
+    },
+    "DD10_specimen.csv": {
+      "bytes": 114,
+      "sha256": "0fad8ab475bc96604e2eec98a5f18e86a74c940010c06dc639703e904d30e251"
+    },
+    "DD11_cells.csv": {
+      "bytes": 7679110,
+      "sha256": "61198118f54f818f01e935c068d97fdfc0b68a2ef88af342e03a7abbe7927f88"
+    },
+    "DD11_coarse.csv": {
+      "bytes": 84605,
+      "sha256": "9d37b5dd55d0f9e486d7061def7b7b0fd6ddd148b7a2448e55697dee3bc76df5"
+    },
+    "DD11_island_cell_20.csv": {
+      "bytes": 157,
+      "sha256": "6c6e119222957abce280cc459777a3900156c568b3fe6b3b362e9a676173a356"
+    },
+    "DD11_island_cell_22.csv": {
+      "bytes": 157,
+      "sha256": "148cdafad2cc5a4fb331dc0beafcda7db6407b4454ca1350530cd31ef6f5abd2"
+    },
+    "DD11_island_cell_24.csv": {
+      "bytes": 156,
+      "sha256": "4cbdba95f66780e64498c8a57b82e1ce35baff2023cf0faa939a11eb4ff9473f"
+    },
+    "DD11_island_cell_26.csv": {
+      "bytes": 179,
+      "sha256": "609e9b35d792790eca9c53f21e82b7405c1df07b110d11cd75dc01f19f285bcb"
+    },
+    "DD11_island_cell_28.csv": {
+      "bytes": 179,
+      "sha256": "a117b0e3690691f1b7c5e1b0053314fe45538cb31dd2fbd76f343ebbfdc3ca43"
+    },
+    "DD11_island_cell_30.csv": {
+      "bytes": 179,
+      "sha256": "ef28ff0f636e2a36562d6a9bd50811f6f84d2865f5f081f90321f66807a39e68"
+    },
+    "DD11_island_point.csv": {
+      "bytes": 178,
+      "sha256": "b8266e78aa55f1d31bb6efd52d2f1ea1d27ff08d7c9b5570ae4a0f5a4d9cf661"
+    },
+    "DD11_island_zoom.csv": {
+      "bytes": 487824,
+      "sha256": "b38e52785fa76bf9fb12565e55d59df9dcfdfacc56ab3a94d71dbc2381bf1c80"
+    },
+    "DD11_island_zoom_grid.json": {
+      "bytes": 220,
+      "sha256": "b62c6f5d88eb940af6d0ecab5221e60a13d6adb7575a4f4158ed3c02dbd53a57"
+    },
+    "DD11_mask.npy": {
+      "bytes": 131200,
+      "sha256": "283d8586870b92026277ace8deb1dfb22e247bddd4ea14ada267d480fb9e0e33"
+    },
+    "DD11_specimen.csv": {
+      "bytes": 116,
+      "sha256": "7cb4131e5e0ed13f043f817792f1042c2de0cd16550e1d1ecc6c864811b3476f"
+    },
+    "DO10_cells.csv": {
+      "bytes": 7438250,
+      "sha256": "ce60a89c4a185aa2481b8dff9ac79fccecdabd84e9f07db98996ea66874338db"
+    },
+    "DO10_mask.npy": {
+      "bytes": 131200,
+      "sha256": "f1c8718f2a414fc18d6c82d9dfa1b9ca8fe1bf51b31aca1e3b03634c34e0adf8"
+    },
+    "DO10_specimen.csv": {
+      "bytes": 116,
+      "sha256": "198a0597b75995d72e8e061f4d22b2fafd36762b53b38a9a5c7ab5e99297cfb9"
+    },
+    "DO11_cells.csv": {
+      "bytes": 7547884,
+      "sha256": "b4a52f2b589235d9a1c11e46d27d38a56cd5cd97b9c7ed3a2ee538babf62f817"
+    },
+    "DO11_mask.npy": {
+      "bytes": 131200,
+      "sha256": "ee6eb6392fc341576bfdd2a04e2c82137e62780751ae9d049d662cede849fb84"
+    },
+    "DO11_specimen.csv": {
+      "bytes": 117,
+      "sha256": "1f081a1027e906c729f753e98062ef4a9f62abf90ad5856c4414a8dc34702187"
+    },
+    "OO01_cells.csv": {
+      "bytes": 7775284,
+      "sha256": "0f22fed5e526d5351102714c8b99918f9613f101291c90f60808b89872f9eee7"
+    },
+    "OO01_mask.npy": {
+      "bytes": 131200,
+      "sha256": "0fb55d0f83e8b91558f40d0b5b2d4a15fb83a61327df12d67b04d06574a7c5b6"
+    },
+    "OO01_specimen.csv": {
+      "bytes": 116,
+      "sha256": "bcbab381e588d8be44ba3de168c44a81b4706397a216c59df6fb4ef5400b3e90"
+    },
+    "OO10_cells.csv": {
+      "bytes": 7522716,
+      "sha256": "5efc747b4748b937d872bf6bfa6a17e14b59004955ebeae01782d6af5f4634a5"
+    },
+    "OO10_mask.npy": {
+      "bytes": 131200,
+      "sha256": "353884f1c540c373b31cad47dbb97a9281c7a74584055f0fee65e13248dbd1e9"
+    },
+    "OO10_specimen.csv": {
+      "bytes": 115,
+      "sha256": "38988efa803ab0d9c2d36fd4a401e4f5a4a331e328acf62b6df2a48edcd810aa"
+    },
+    "README_ZIPPER_STABILITY.md": {
+      "bytes": 5996,
+      "sha256": "2579bdcdae1bd99050d34d5b2ff83f1d95f208fa0fec86aa8f33430c5b85a4fd"
+    },
+    "build_zipper_stability_figures.py": {
+      "bytes": 12378,
+      "sha256": "dae91c792ec3d82073c84b339c876425503492806008a61d01c927eb43e0f57b"
+    },
+    "certify_zipper_cells.cpp": {
+      "bytes": 6365,
+      "sha256": "f239f2548f387d3afa97f1e5db76595283aa31b2b85003886e8b81ebdda06179"
+    },
+    "zipper_curve_gallery.pdf": {
+      "bytes": 5798644,
+      "sha256": "66bdba84bfbafdc91343b2539caa5e539dab78f60204524454de5a687e5428b4"
+    },
+    "zipper_curve_gallery.png": {
+      "bytes": 120652,
+      "sha256": "859cfdf0e0f1974b84bebb5b4d8dcaf9a9504245321459b6451dc4b82f81c011"
+    },
+    "zipper_stability_atlas.pdf": {
+      "bytes": 6137590,
+      "sha256": "77e4c48a21fd2e7f9d3050d1a19686bcfebcd4dbf7062f80727640b35519a7fb"
+    },
+    "zipper_stability_atlas.png": {
+      "bytes": 369916,
+      "sha256": "e94551a1db5455027d9bcdf160e0b70a3ac2a535919a32de07ca284362e10238"
+    },
+    "zipper_stability_atlas_paper.pdf": {
+      "bytes": 251879,
+      "sha256": "038e951be666c6cc235c6f7175c321586fe24c24f44e65e02d94c7c6ed8a1ab3"
+    },
+    "zipper_stability_atlas_paper.png": {
+      "bytes": 149749,
+      "sha256": "2b1638d5bd183e1309583854381be0de0fd23c99820a12d0fb014422d9211eca"
+    },
+    "zipper_stability_metadata.json": {
+      "bytes": 5506,
+      "sha256": "93f7094768af928b6772d0507a0e85be48d9211bf5624875c06083cbb47955e4"
+    }
+  },
+  "artifact_qa": {
+    "zipper_stability_atlas.pdf": {
+      "bytes": 6137590,
+      "sha256": "77e4c48a21fd2e7f9d3050d1a19686bcfebcd4dbf7062f80727640b35519a7fb",
+      "pages": 1,
+      "width_cm": 59.99999999999989,
+      "height_cm": 31.999999999999,
+      "EOF": true,
+      "parse_ok": true,
+      "all_fonts_embedded": true,
+      "font_count": 3
+    },
+    "zipper_stability_atlas_paper.pdf": {
+      "bytes": 251879,
+      "sha256": "038e951be666c6cc235c6f7175c321586fe24c24f44e65e02d94c7c6ed8a1ab3",
+      "pages": 1,
+      "width_cm": 15.599999999998278,
+      "height_cm": 12.800000000000306,
+      "EOF": true,
+      "parse_ok": true,
+      "all_fonts_embedded": true,
+      "font_count": 3
+    },
+    "zipper_curve_gallery.pdf": {
+      "bytes": 5798644,
+      "sha256": "66bdba84bfbafdc91343b2539caa5e539dab78f60204524454de5a687e5428b4",
+      "pages": 1,
+      "width_cm": 15.599999999998278,
+      "height_cm": 13.299999999998304,
+      "EOF": true,
+      "parse_ok": true,
+      "all_fonts_embedded": true,
+      "font_count": 3
+    }
+  },
+  "revision": {
+    "reason": "Exact invariant-triangle proof classifies OO01 and OO10 as full stable disks.",
+    "exact_complete_slices": [
+      "OO00",
+      "OO01",
+      "OO10"
+    ],
+    "displayed_numerical_inner_covers": [
+      "DD01",
+      "DD10",
+      "DD11",
+      "DO10",
+      "DO11"
+    ],
+    "seven_return_criteria_retained": true,
+    "interval_computations_rerun": false,
+    "figures_regenerated": true,
+    "proof_source": "../manuscript/math/oo01_oo10_exact_disk.tex",
+    "proof_sha256": "24485cf61d6d3b3a2a16c4e932d040531608822599894fd7810c43e061a8e02e",
+    "preserved_certificate_files": {
+      "DD10_mask.npy": "364e8eff89cdb90f77440c31b15c4ea73e497c424bdd0909c4da3b498658a4f3",
+      "DD10_cells.csv": "588a17db4dea921e4ddf4d0f9e3ecb3f738e18ab8f708bde2c8f541a55b501f3",
+      "DO10_mask.npy": "f1c8718f2a414fc18d6c82d9dfa1b9ca8fe1bf51b31aca1e3b03634c34e0adf8",
+      "DD01_cells.csv": "d84f9380cdac422ff8f0f7b57f0c435d4d8ec485c671e9cec03b2e897ddde335",
+      "DD01_coarse.csv": "519f5b50b02c7593b9940edad4888439827ca6f91223239c633e2c7d687155d8",
+      "DO10_cells.csv": "ce60a89c4a185aa2481b8dff9ac79fccecdabd84e9f07db98996ea66874338db",
+      "DD11_island_cell_22.csv": "148cdafad2cc5a4fb331dc0beafcda7db6407b4454ca1350530cd31ef6f5abd2",
+      "DO11_mask.npy": "ee6eb6392fc341576bfdd2a04e2c82137e62780751ae9d049d662cede849fb84",
+      "OO10_specimen.csv": "38988efa803ab0d9c2d36fd4a401e4f5a4a331e328acf62b6df2a48edcd810aa",
+      "DO11_specimen.csv": "1f081a1027e906c729f753e98062ef4a9f62abf90ad5856c4414a8dc34702187",
+      "DD11_island_point.csv": "b8266e78aa55f1d31bb6efd52d2f1ea1d27ff08d7c9b5570ae4a0f5a4d9cf661",
+      "OO01_cells.csv": "0f22fed5e526d5351102714c8b99918f9613f101291c90f60808b89872f9eee7",
+      "DO10_specimen.csv": "198a0597b75995d72e8e061f4d22b2fafd36762b53b38a9a5c7ab5e99297cfb9",
+      "OO01_specimen.csv": "bcbab381e588d8be44ba3de168c44a81b4706397a216c59df6fb4ef5400b3e90",
+      "DD11_island_cell_24.csv": "4cbdba95f66780e64498c8a57b82e1ce35baff2023cf0faa939a11eb4ff9473f",
+      "OO10_cells.csv": "5efc747b4748b937d872bf6bfa6a17e14b59004955ebeae01782d6af5f4634a5",
+      "DD11_island_cell_28.csv": "a117b0e3690691f1b7c5e1b0053314fe45538cb31dd2fbd76f343ebbfdc3ca43",
+      "DD11_mask.npy": "283d8586870b92026277ace8deb1dfb22e247bddd4ea14ada267d480fb9e0e33",
+      "DD11_island_cell_26.csv": "609e9b35d792790eca9c53f21e82b7405c1df07b110d11cd75dc01f19f285bcb",
+      "certify_zipper_cells.cpp": "f239f2548f387d3afa97f1e5db76595283aa31b2b85003886e8b81ebdda06179",
+      "DD01_specimen.csv": "7db957fcef2e38e005a1b40ae7e55ecd8ba19f3c552d0361f9b1dc996b3ceef4",
+      "DD11_island_cell_20.csv": "6c6e119222957abce280cc459777a3900156c568b3fe6b3b362e9a676173a356",
+      "DD11_coarse.csv": "9d37b5dd55d0f9e486d7061def7b7b0fd6ddd148b7a2448e55697dee3bc76df5",
+      "OO10_mask.npy": "353884f1c540c373b31cad47dbb97a9281c7a74584055f0fee65e13248dbd1e9",
+      "OO01_mask.npy": "0fb55d0f83e8b91558f40d0b5b2d4a15fb83a61327df12d67b04d06574a7c5b6",
+      "DD01_mask.npy": "2176eb0d28844aacf89103f5d38938bcdcd326b5e52e9bd7bc38a8dac2d13b7e",
+      "DD11_island_zoom.csv": "b38e52785fa76bf9fb12565e55d59df9dcfdfacc56ab3a94d71dbc2381bf1c80",
+      "DD11_cells.csv": "61198118f54f818f01e935c068d97fdfc0b68a2ef88af342e03a7abbe7927f88",
+      "DD11_specimen.csv": "7cb4131e5e0ed13f043f817792f1042c2de0cd16550e1d1ecc6c864811b3476f",
+      "DD10_specimen.csv": "0fad8ab475bc96604e2eec98a5f18e86a74c940010c06dc639703e904d30e251",
+      "DD11_island_cell_30.csv": "ef28ff0f636e2a36562d6a9bd50811f6f84d2865f5f081f90321f66807a39e68",
+      "DO11_cells.csv": "b4a52f2b589235d9a1c11e46d27d38a56cd5cd97b9c7ed3a2ee538babf62f817"
+    },
+    "OO01_OO10_masks": "Retained numerical inner covers; displayed full disks come from the exact theorem."
+  }
+}

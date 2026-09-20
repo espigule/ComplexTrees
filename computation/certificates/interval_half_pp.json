@@ -1,0 +1,364 @@
+{
+  "benchmark": "interval_half_pp",
+  "benchmark_description": "The attractor is exactly [-2,2]; finite survival must remain unresolved.",
+  "bound": {
+    "contraction_bound": "1/2",
+    "invariant_disk_centre": [
+      "0",
+      "0"
+    ],
+    "invariant_disk_radius": "2"
+  },
+  "excluded": [
+    {
+      "centre_u": [
+        "-3/2",
+        "0"
+      ],
+      "centre_v": [
+        "1/2",
+        "0"
+      ],
+      "squared_distance": "4",
+      "squared_threshold": "1",
+      "strict_gap": "3",
+      "u": "FF",
+      "v": "GF"
+    },
+    {
+      "centre_u": [
+        "-3/2",
+        "0"
+      ],
+      "centre_v": [
+        "3/2",
+        "0"
+      ],
+      "squared_distance": "9",
+      "squared_threshold": "1",
+      "strict_gap": "8",
+      "u": "FF",
+      "v": "GG"
+    },
+    {
+      "centre_u": [
+        "-1/2",
+        "0"
+      ],
+      "centre_v": [
+        "3/2",
+        "0"
+      ],
+      "squared_distance": "4",
+      "squared_threshold": "1",
+      "strict_gap": "3",
+      "u": "FG",
+      "v": "GG"
+    },
+    {
+      "centre_u": [
+        "-3/4",
+        "0"
+      ],
+      "centre_v": [
+        "1/4",
+        "0"
+      ],
+      "squared_distance": "1",
+      "squared_threshold": "1/4",
+      "strict_gap": "3/4",
+      "u": "FGF",
+      "v": "GFF"
+    },
+    {
+      "centre_u": [
+        "-3/4",
+        "0"
+      ],
+      "centre_v": [
+        "3/4",
+        "0"
+      ],
+      "squared_distance": "9/4",
+      "squared_threshold": "1/4",
+      "strict_gap": "2",
+      "u": "FGF",
+      "v": "GFG"
+    },
+    {
+      "centre_u": [
+        "-1/4",
+        "0"
+      ],
+      "centre_v": [
+        "3/4",
+        "0"
+      ],
+      "squared_distance": "1",
+      "squared_threshold": "1/4",
+      "strict_gap": "3/4",
+      "u": "FGG",
+      "v": "GFG"
+    },
+    {
+      "centre_u": [
+        "-3/8",
+        "0"
+      ],
+      "centre_v": [
+        "1/8",
+        "0"
+      ],
+      "squared_distance": "1/4",
+      "squared_threshold": "1/16",
+      "strict_gap": "3/16",
+      "u": "FGGF",
+      "v": "GFFF"
+    },
+    {
+      "centre_u": [
+        "-3/8",
+        "0"
+      ],
+      "centre_v": [
+        "3/8",
+        "0"
+      ],
+      "squared_distance": "9/16",
+      "squared_threshold": "1/16",
+      "strict_gap": "1/2",
+      "u": "FGGF",
+      "v": "GFFG"
+    },
+    {
+      "centre_u": [
+        "-1/8",
+        "0"
+      ],
+      "centre_v": [
+        "3/8",
+        "0"
+      ],
+      "squared_distance": "1/4",
+      "squared_threshold": "1/16",
+      "strict_gap": "3/16",
+      "u": "FGGG",
+      "v": "GFFG"
+    },
+    {
+      "centre_u": [
+        "-3/16",
+        "0"
+      ],
+      "centre_v": [
+        "1/16",
+        "0"
+      ],
+      "squared_distance": "1/16",
+      "squared_threshold": "1/64",
+      "strict_gap": "3/64",
+      "u": "FGGGF",
+      "v": "GFFFF"
+    },
+    {
+      "centre_u": [
+        "-3/16",
+        "0"
+      ],
+      "centre_v": [
+        "3/16",
+        "0"
+      ],
+      "squared_distance": "9/64",
+      "squared_threshold": "1/64",
+      "strict_gap": "1/8",
+      "u": "FGGGF",
+      "v": "GFFFG"
+    },
+    {
+      "centre_u": [
+        "-1/16",
+        "0"
+      ],
+      "centre_v": [
+        "3/16",
+        "0"
+      ],
+      "squared_distance": "1/16",
+      "squared_threshold": "1/64",
+      "strict_gap": "3/64",
+      "u": "FGGGG",
+      "v": "GFFFG"
+    },
+    {
+      "centre_u": [
+        "-3/32",
+        "0"
+      ],
+      "centre_v": [
+        "1/32",
+        "0"
+      ],
+      "squared_distance": "1/64",
+      "squared_threshold": "1/256",
+      "strict_gap": "3/256",
+      "u": "FGGGGF",
+      "v": "GFFFFF"
+    },
+    {
+      "centre_u": [
+        "-3/32",
+        "0"
+      ],
+      "centre_v": [
+        "3/32",
+        "0"
+      ],
+      "squared_distance": "9/256",
+      "squared_threshold": "1/256",
+      "strict_gap": "1/32",
+      "u": "FGGGGF",
+      "v": "GFFFFG"
+    },
+    {
+      "centre_u": [
+        "-1/32",
+        "0"
+      ],
+      "centre_v": [
+        "3/32",
+        "0"
+      ],
+      "squared_distance": "1/64",
+      "squared_threshold": "1/256",
+      "strict_gap": "3/256",
+      "u": "FGGGGG",
+      "v": "GFFFFG"
+    },
+    {
+      "centre_u": [
+        "-3/64",
+        "0"
+      ],
+      "centre_v": [
+        "1/64",
+        "0"
+      ],
+      "squared_distance": "1/256",
+      "squared_threshold": "1/1024",
+      "strict_gap": "3/1024",
+      "u": "FGGGGGF",
+      "v": "GFFFFFF"
+    },
+    {
+      "centre_u": [
+        "-3/64",
+        "0"
+      ],
+      "centre_v": [
+        "3/64",
+        "0"
+      ],
+      "squared_distance": "9/1024",
+      "squared_threshold": "1/1024",
+      "strict_gap": "1/128",
+      "u": "FGGGGGF",
+      "v": "GFFFFFG"
+    },
+    {
+      "centre_u": [
+        "-1/64",
+        "0"
+      ],
+      "centre_v": [
+        "3/64",
+        "0"
+      ],
+      "squared_distance": "1/256",
+      "squared_threshold": "1/1024",
+      "strict_gap": "3/1024",
+      "u": "FGGGGGG",
+      "v": "GFFFFFG"
+    },
+    {
+      "centre_u": [
+        "-3/128",
+        "0"
+      ],
+      "centre_v": [
+        "1/128",
+        "0"
+      ],
+      "squared_distance": "1/1024",
+      "squared_threshold": "1/4096",
+      "strict_gap": "3/4096",
+      "u": "FGGGGGGF",
+      "v": "GFFFFFFF"
+    },
+    {
+      "centre_u": [
+        "-3/128",
+        "0"
+      ],
+      "centre_v": [
+        "3/128",
+        "0"
+      ],
+      "squared_distance": "9/4096",
+      "squared_threshold": "1/4096",
+      "strict_gap": "1/512",
+      "u": "FGGGGGGF",
+      "v": "GFFFFFFG"
+    },
+    {
+      "centre_u": [
+        "-1/128",
+        "0"
+      ],
+      "centre_v": [
+        "3/128",
+        "0"
+      ],
+      "squared_distance": "1/1024",
+      "squared_threshold": "1/4096",
+      "strict_gap": "3/4096",
+      "u": "FGGGGGGG",
+      "v": "GFFFFFFG"
+    }
+  ],
+  "family": {
+    "a": [
+      "1/2",
+      "0"
+    ],
+    "b": [
+      "1/2",
+      "0"
+    ],
+    "convention": "J_0(z)=z; J_1(z)=conjugate(z); words compose left to right as maps",
+    "p": 0,
+    "q": 0
+  },
+  "frontier": [
+    {
+      "reason": "depth_limit",
+      "u": "FGGGGGGG",
+      "v": "GFFFFFFF"
+    }
+  ],
+  "interpretation": "A finite frontier survives the specified limits. No connectedness conclusion is made.",
+  "limits": {
+    "max_depth": 8,
+    "max_pairs": 20000
+  },
+  "method": "strict disk separation with equal-length paired cylinder refinement",
+  "result": "UNRESOLVED",
+  "schema": "rational-planar-ifs-exclusion-1",
+  "statistics": {
+    "excluded_leaf_pairs": 21,
+    "frontier_leaf_pairs": 1,
+    "maximum_depth": 8,
+    "split_pairs": 7,
+    "tested_pairs": 29
+  }
+}

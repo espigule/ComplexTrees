@@ -1,0 +1,19 @@
+{
+  "title": "Four-Dimensional Connectedness Loci and Structural Stability for Planar Binary Similarities",
+  "author": "Bernat Espigulé",
+  "affiliation": "Universitat de Girona",
+  "version": "1.0.0",
+  "release_date": "2026-09-20",
+  "manuscript_date": "2026-09-18",
+  "publication_status": "Author-released preprint; not a journal publication",
+  "arxiv_id": null,
+  "repository": "https://github.com/espigule/ComplexTrees",
+  "publication_page": "https://complextrees.com/4D/publication/",
+  "explorer": "https://complextrees.com/4D/",
+  "atlas": "https://complextrees.com/4D/atlas/",
+  "project": "PID2023-146424NB-I00",
+  "poster_size_cm": [
+    70,
+    140
+  ]
+}

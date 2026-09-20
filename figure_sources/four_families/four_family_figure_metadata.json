@@ -1,0 +1,136 @@
+{
+  "displayed_families": [
+    "DD10",
+    "DD11",
+    "DO10",
+    "DO11"
+  ],
+  "source_grid": [
+    512,
+    256
+  ],
+  "positive_certificate_sources": {
+    "DD10": {
+      "certified_closed_q_cells": 67983,
+      "displayed_original_files": [
+        "DD10_cells.csv",
+        "DD01_cells.csv"
+      ],
+      "source_sha256": {
+        "DD10_cells.csv": "588a17db4dea921e4ddf4d0f9e3ecb3f738e18ab8f708bde2c8f541a55b501f3",
+        "DD01_cells.csv": "d84f9380cdac422ff8f0f7b57f0c435d4d8ec485c671e9cec03b2e897ddde335"
+      },
+      "reflection_completion": "q -> 1-conjugate(q)",
+      "projection_mesh": {
+        "positive_blocks": 16888,
+        "block_side_q": 0.00390625,
+        "q_conjugation_added": true,
+        "displayed_q_cells": 67552,
+        "DD11_extra_island_square_added": false
+      }
+    },
+    "DD11": {
+      "certified_closed_q_cells": 69445,
+      "displayed_original_files": [
+        "DD11_cells.csv"
+      ],
+      "source_sha256": {
+        "DD11_cells.csv": "61198118f54f818f01e935c068d97fdfc0b68a2ef88af342e03a7abbe7927f88"
+      },
+      "reflection_completion": null,
+      "projection_mesh": {
+        "positive_blocks": 17248,
+        "block_side_q": 0.00390625,
+        "q_conjugation_added": true,
+        "displayed_q_cells": 68992,
+        "DD11_extra_island_square_added": true
+      }
+    },
+    "DO10": {
+      "certified_closed_q_cells": 54692,
+      "displayed_original_files": [
+        "DO10_cells.csv"
+      ],
+      "source_sha256": {
+        "DO10_cells.csv": "ce60a89c4a185aa2481b8dff9ac79fccecdabd84e9f07db98996ea66874338db"
+      },
+      "reflection_completion": null,
+      "projection_mesh": {
+        "positive_blocks": 13566,
+        "block_side_q": 0.00390625,
+        "q_conjugation_added": true,
+        "displayed_q_cells": 54264,
+        "DD11_extra_island_square_added": false
+      }
+    },
+    "DO11": {
+      "certified_closed_q_cells": 56340,
+      "displayed_original_files": [
+        "DO11_cells.csv"
+      ],
+      "source_sha256": {
+        "DO11_cells.csv": "b4a52f2b589235d9a1c11e46d27d38a56cd5cd97b9c7ed3a2ee538babf62f817"
+      },
+      "reflection_completion": null,
+      "projection_mesh": {
+        "positive_blocks": 13993,
+        "block_side_q": 0.00390625,
+        "q_conjugation_added": true,
+        "displayed_q_cells": 55972,
+        "DD11_extra_island_square_added": false
+      }
+    }
+  },
+  "mask_semantics": "Closed positive q-cell cover; empty background has no membership meaning. Planar faces and pcolormesh corner chords are piecewise-linear display approximations of the nonlinear transported cells.",
+  "projection": {
+    "coordinates": "X=(4+rho*cos(theta1))*cos(theta2),Y=(4+rho*cos(theta1))*sin(theta2),Z=rho*sin(theta1)",
+    "theta1": "arg canonical a=-arg canonical c1",
+    "theta2": "arg canonical b=-arg canonical c2",
+    "fourth_coordinate": "w=abs(q)/(abs(q)+abs(1-q))",
+    "ghost_reference": "rho=2; only theta1 in [pi/2,3pi/2] is drawn",
+    "not_a_geometric_hole": "The toroidal hole belongs to the coordinate display.",
+    "quantities": "rho=2/(abs(q)+abs(1-q)); exterior abs(c1),abs(c2)>1",
+    "DO_normalization": "projection_geometry.py contains the phase correction from endpoint to canonical charts"
+  },
+  "exterior_slice": {
+    "coordinate": "unsigned endpoint c=1/q",
+    "window": [
+      0.96,
+      4.65,
+      -2.7,
+      0.13
+    ],
+    "q_half": "Im q>=0, hence Im c<=0; other half follows by conjugation",
+    "full_slice_is_unbounded": true
+  },
+  "shared_specimens": {
+    "A": {
+      "q_real": 0.5,
+      "q_imag": 0.2
+    },
+    "B": {
+      "q_real": 0.5,
+      "q_imag": 0.4
+    },
+    "C": {
+      "q_real": 0.34090875,
+      "q_imag": 0.43484625
+    }
+  },
+  "C_classification": {
+    "DD10": "No membership assertion shown",
+    "DD11": "Certified stable; published Wiggle Island result",
+    "DO10": "Certified secondary contact by exact adaptive degree -1",
+    "DO11": "Certified stable"
+  },
+  "curve_approximation": "C: adaptive chord approximation with uniform error <5e-4, exact source traversal and first_level_join_index, no simplification; see specimen_checks/adaptive_curve_metadata.json. A/B: fixed depth 20; preview flag is False",
+  "DD11_island": "The extra closed 2^-20 square consists of 64x64 certified closed cells, transported by c=1/q.",
+  "figure_outputs": [
+    "four_family_projection.pdf",
+    "four_family_DD.pdf",
+    "four_family_DO.pdf",
+    "four_family_gallery_paper.pdf",
+    "four_family_poster.pdf",
+    "DD11_island_exterior.pdf"
+  ]
+}

@@ -1,0 +1,149 @@
+[
+  {
+    "family": "DD01",
+    "seed": [
+      "12",
+      "22"
+    ],
+    "returns": [
+      "1",
+      "1"
+    ],
+    "eta": "{(1, 0): 1}",
+    "identities_verified": true,
+    "q_preimage_endpoints": [
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "family": "DD10",
+    "seed": [
+      "11",
+      "21"
+    ],
+    "returns": [
+      "2",
+      "2"
+    ],
+    "eta": "{(1, 0): -1, (0, 0): 1}",
+    "identities_verified": true,
+    "q_preimage_endpoints": [
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "family": "DD11",
+    "seed": [
+      "1",
+      "2"
+    ],
+    "returns": [
+      "12",
+      "21"
+    ],
+    "eta": "{(2, 0): -1, (1, 0): 1}",
+    "identities_verified": true,
+    "q_preimage_endpoints": [
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "family": "DO10",
+    "seed": [
+      "11",
+      "21"
+    ],
+    "returns": [
+      "22",
+      "22"
+    ],
+    "eta": "{(1, 1): 1, (1, 0): -1, (0, 1): -1, (0, 0): 1}",
+    "identities_verified": true,
+    "q_preimage_endpoints": [
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "family": "DO11",
+    "seed": [
+      "1",
+      "2"
+    ],
+    "returns": [
+      "1212",
+      "2121"
+    ],
+    "eta": "{(2, 2): 1, (2, 1): -1, (1, 2): -1, (1, 1): 1}",
+    "identities_verified": true,
+    "q_preimage_endpoints": [
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "family": "OO01",
+    "seed": [
+      "12",
+      "22"
+    ],
+    "returns": [
+      "11",
+      "11"
+    ],
+    "eta": "{(1, 1): 1}",
+    "identities_verified": true,
+    "q_preimage_endpoints": [
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "family": "OO10",
+    "seed": [
+      "11",
+      "21"
+    ],
+    "returns": [
+      "22",
+      "22"
+    ],
+    "eta": "{(1, 1): 1, (1, 0): -1, (0, 1): -1, (0, 0): 1}",
+    "identities_verified": true,
+    "q_preimage_endpoints": [
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ]
+  }
+]

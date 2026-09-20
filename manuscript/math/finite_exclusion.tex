@@ -1,0 +1,44 @@
+\section{Finite computation and what its output proves}
+\label{sec:core-computation}
+
+Let $r=\max\{|a|,|b|\}$ and $R=(1-r)^{-1}$. The closed disk
+$B=\overline{D}(0,R)$ satisfies $S_1B\cup S_2B\subseteq B$.
+Put $K_n=\bigcup_{|u|=n}S_uB$. These are nested compact outer
+approximations of $K$, with Hausdorff error at most $2Rr^n$.
+
+\begin{proposition}[Finite disconnection certificates]
+\label{prop:finite-exclusion}
+The attractor is disconnected if and only if some $n$ satisfies
+$S_1K_n\cap S_2K_n=\varnothing$. Each such assertion reduces to
+finitely many strict disk-separation inequalities. A parameter
+that survives these tests to a finite depth has not thereby been
+proved connected.
+\end{proposition}
+\begin{proof}
+The sets $S_1K_n\cap S_2K_n$ are nested compact sets, and their
+intersection is $S_1K\cap S_2K$. If every one is nonempty, compactness
+gives a point in their intersection. Otherwise the empty stage
+certifies disjoint first pieces. Each cylinder image of $B$ is a
+disk, including for opposite similarities; the finite union
+intersection is empty exactly when all cross-pairs of disks are
+disjoint. The binary contact criterion completes the proof.
+\end{proof}
+
+Outward-rounded interval or ball arithmetic can turn strict
+separation inequalities into validated certificates. Finite
+survival is an outer approximation and should be labelled
+``not excluded at depth $n$''. Positive certificates can instead
+come from a proved sufficient region such as
+\eqref{eq:modulus-bounds}, a verified zipper relation, or exact
+address contacts forming a connected first-piece graph.
+
+\input{math/gap_persistence.tex}
+
+An address chosen by a finite search is a witness selected by that
+algorithm and its tie-breaking rule. A colour change between such
+addresses does not, without further proof, establish a topological
+stratum, an entropy invariant or a smooth frontier branch. Boundary
+meshes should therefore record the depth, enclosure bound, decision
+status and witness-selection rule. Radial scans must retain all
+detected transition intervals unless a one-transition theorem has
+been established for the region being rendered.

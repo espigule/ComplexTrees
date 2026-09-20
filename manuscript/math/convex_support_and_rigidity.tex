@@ -1,0 +1,177 @@
+% Independently reviewed restoration from the July 2026 Encyclopedia.
+% Requires the canonical normalized maps, binary contact criterion and modulus
+% bounds already established in the main manuscript. No new global shell
+% regularity or monotonicity is assumed.
+\section{Convex support certificates and rigidity at the outer bound}
+\label{sec:restored-support}
+
+Write the normalized similarities as
+\[
+ f_s(z)=s+L_s z,\qquad s\in\{-1,1\},\qquad L_s=r_sO_s,
+\]
+where $O_s$ is an orthogonal real-linear map and $0<r_s<1$.
+Put $q=\max(r_-,r_+)$, let $K$ be the attractor, and let
+$P=\operatorname{conv}K$. Inner products below are the Euclidean inner
+product on $\mathbb C\simeq\mathbb R^2$, with $1$ denoting the real unit
+vector.
+
+\begin{theorem}[Convex support certificate]
+\label{thm:restored-support}
+The support function $h(u)=\sup_{x\in P}\langle u,x\rangle$, $u\in S^1$,
+is the unique continuous solution of
+\begin{equation}\label{eq:restored-support-fixed}
+ h(u)=\max_{s\in\{-1,1\}}
+ \bigl(s\langle u,1\rangle+r_s h(O_s^{\mathsf T}u)\bigr).
+\end{equation}
+Define
+\begin{equation}\label{eq:restored-support-gap}
+ g(u)=r_-h(O_-^{\mathsf T}u)+r_+h(-O_+^{\mathsf T}u)
+       -2\langle u,1\rangle.
+\end{equation}
+Then $f_-(P)\cap f_+(P)\ne\varnothing$ if and only if
+$g(u)\ge0$ for every $u\in S^1$. In particular, one direction for which
+$g(u)<0$ certifies that $K$ is disconnected.
+
+Let $T$ denote the operator in \eqref{eq:restored-support-fixed}, and set
+$h_0=0$, $h_n=T^nh_0$. Then
+\begin{equation}\label{eq:restored-support-error}
+ 0\le h_n\le h_{n+1}\le h,\qquad
+ \|h-h_n\|_\infty\le E_n:=\frac{q^n}{1-q}.
+\end{equation}
+If $g_n$ is obtained by replacing $h$ with $h_n$ in
+\eqref{eq:restored-support-gap}, then
+\begin{equation}\label{eq:restored-support-gap-error}
+ g_n(u)\le g(u)\le g_n(u)+(r_-+r_+)E_n.
+\end{equation}
+Consequently, $g_n(u)+(r_-+r_+)E_n<0$ is a finite disconnection
+certificate.
+\end{theorem}
+
+\begin{proof}
+Taking the convex hull of the invariance equation gives
+$P=\operatorname{conv}(f_-(P)\cup f_+(P))$. The support function of an
+affine image is obtained by applying the transpose of its linear part
+to the direction and adding the translation term. This proves
+\eqref{eq:restored-support-fixed}. The operator $T$ is a contraction on
+$C(S^1)$ in the supremum norm, with contraction constant at most $q$,
+so its fixed point is unique.
+
+The two convex pieces meet precisely when
+$2\in L_-P-L_+P$. Membership in a compact convex set is equivalent to
+all its supporting half-space inequalities. The support function of
+$L_-P-L_+P$ is
+$r_-h(O_-^{\mathsf T}u)+r_+h(-O_+^{\mathsf T}u)$, proving the criterion.
+Actual first-piece contact implies convex first-piece contact.
+
+The operator $T$ preserves pointwise order, and
+$h_1(u)=|\langle u,1\rangle|\ge0$. Thus its iterates increase to $h$.
+Since $\|h_1-h_0\|_\infty\le1$, the contraction estimate gives
+\[
+ \|h-h_n\|_\infty\le
+ \sum_{j=n}^{\infty}\|h_{j+1}-h_j\|_\infty
+ \le\sum_{j=n}^{\infty}q^j=E_n.
+\]
+Multiplying the pointwise errors by $r_-$ and $r_+$ proves
+\eqref{eq:restored-support-gap-error}.
+\end{proof}
+
+\begin{remark}[Controlling unsampled directions]
+\label{rem:restored-direction-grid}
+Finite directional sampling also requires a bound between samples.
+The function $h_n$ is the support function of the convex hull of
+$\{f_u(0):|u|=n\}$, which lies in the disk of radius
+$R_n=(1-q^n)/(1-q)$. Therefore $g_n$ is Lipschitz in chordal distance
+on $S^1$, with constant at most
+$L_n=(r_-+r_+)R_n+2$.
+If every direction is within chordal distance $\eta$ of a sampled
+direction, then $\min_j g_n(u_j)\ge L_n\eta$ proves convex contact.
+The inequalities must use rigorous numerical enclosures when
+implemented. Convex contact alone does not certify contact of the
+fractal pieces; it is an outer approximation to connectedness.
+\end{remark}
+
+\begin{theorem}[Rigidity on the outer ceiling]
+\label{thm:restored-outer-rigidity}
+Suppose $r_-+r_+=1$. Then $K$ is connected if and only if both normalized
+semilinear multipliers are real. In this case $K$ is a real interval and
+$f_-(K)\cap f_+(K)$ is a singleton. Equivalently, the part of the
+connectedness locus on $\rho=2$ consists precisely of these real systems.
+\end{theorem}
+
+\begin{proof}
+Assume first that $K$ is connected, and put $D=\operatorname{diam}K>0$.
+The level-$n$ cylinder cover has maximum diameter at most $q^nD$ and
+total diameter
+\[
+ \sum_{|u|=n}\operatorname{diam}f_u(K)
+   =D(r_-+r_+)^n=D.
+\]
+Hence $\mathcal H^1(K)\le D$.
+
+We give the equality argument explicitly. Choose a diametral pair
+$x,y\in K$. If $z\in K$ is not on the segment $[x,y]$, the three
+strictly positive numbers
+\[
+ \begin{aligned}
+ R_x&=\frac{|x-y|+|x-z|-|y-z|}{2},\\
+ R_y&=\frac{|x-y|+|y-z|-|x-z|}{2},\\
+ R_z&=\frac{|x-z|+|y-z|-|x-y|}{2}
+ \end{aligned}
+\]
+are radii of pairwise disjoint open balls centered at $x,y,z$.
+Connectedness implies that the distance from each center takes every
+value between zero and the corresponding radius on the part of $K$
+inside that ball. Since a distance function is $1$-Lipschitz,
+\[
+ \mathcal H^1(K)\ge R_x+R_y+R_z
+   =\frac{|x-y|+|x-z|+|y-z|}{2}>D,
+\]
+a contradiction. Thus $K\subset[x,y]$, and connectedness gives
+$K=[x,y]$.
+
+It remains to identify the line. The average map
+$G=(f_-+f_+)/2$ is a strict real-linear contraction fixing zero.
+Convexity of the segment gives $G(K)\subset K$. Therefore
+$0\in K$, and then $-1=f_-(0)$ and $1=f_+(0)$ belong to $K$.
+Its supporting line is the real line. Each nonzero semilinear map
+sends a nondegenerate real interval to a real interval, so its complex
+multiplier is real.
+
+Conversely, for real multipliers the real-slice criterion gives a
+connected interval when $r_-+r_+=1$. The two subintervals cover $K$,
+their lengths sum to the length of $K$, and they are proper
+subintervals. Their intersection is consequently one point.
+\end{proof}
+
+\begin{proposition}[Area of the first-piece contact]
+\label{prop:restored-contact-area}
+Let $Q=f_-(K)\cap f_+(K)$ and let $m_2$ denote planar Lebesgue measure.
+For every parameter,
+\begin{equation}\label{eq:restored-contact-area}
+ m_2(Q)=(r_-^2+r_+^2-1)m_2(K).
+\end{equation}
+Every point on the boundary of the connectedness locus, relative to
+the strict contraction domain, satisfies
+\[
+ r_-+r_+\ge1,\qquad r_-^2+r_+^2\le1,
+ \qquad m_2(Q)=0.
+\]
+If $r_-^2+r_+^2<1$, one also has $m_2(K)=0$.
+\end{proposition}
+
+\begin{proof}
+Inclusion--exclusion and similarity scaling give
+\[
+ m_2(K)=r_-^2m_2(K)+r_+^2m_2(K)-m_2(Q),
+\]
+which proves the identity. The connectedness locus is relatively
+closed, so a boundary point belongs to it and satisfies the outer
+bound. The open set $r_-^2+r_+^2>1$ lies inside the connectedness locus
+by the universal inner bound. Hence boundary points satisfy the
+opposite weak inequality. If its left side is strictly less than
+one, nonnegativity in \eqref{eq:restored-contact-area} forces both
+measures to vanish; at equality the contact measure vanishes directly.
+\end{proof}
+
+Zero-area contact can be a nondegenerate segment. The exact families
+below exhibit this on the full parameter-space boundary.

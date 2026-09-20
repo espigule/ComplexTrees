@@ -1,0 +1,823 @@
+{
+  "benchmark": "imaginary_two_thirds_pp",
+  "benchmark_description": "Both maps preserve orientation; nontrivial refinement.",
+  "bound": {
+    "contraction_bound": "2/3",
+    "invariant_disk_centre": [
+      "0",
+      "0"
+    ],
+    "invariant_disk_radius": "3"
+  },
+  "excluded": [
+    {
+      "centre_u": [
+        "-5/9",
+        "-2/3"
+      ],
+      "centre_v": [
+        "13/9",
+        "-2/3"
+      ],
+      "squared_distance": "4",
+      "squared_threshold": "256/81",
+      "strict_gap": "68/81",
+      "u": "FFF",
+      "v": "GFF"
+    },
+    {
+      "centre_u": [
+        "-13/9",
+        "-2/3"
+      ],
+      "centre_v": [
+        "13/9",
+        "-2/3"
+      ],
+      "squared_distance": "676/81",
+      "squared_threshold": "256/81",
+      "strict_gap": "140/27",
+      "u": "FFG",
+      "v": "GFF"
+    },
+    {
+      "centre_u": [
+        "-13/9",
+        "-2/3"
+      ],
+      "centre_v": [
+        "5/9",
+        "-2/3"
+      ],
+      "squared_distance": "4",
+      "squared_threshold": "256/81",
+      "strict_gap": "68/81",
+      "u": "FFG",
+      "v": "GFG"
+    },
+    {
+      "centre_u": [
+        "-5/9",
+        "-2/3"
+      ],
+      "centre_v": [
+        "13/9",
+        "2/3"
+      ],
+      "squared_distance": "52/9",
+      "squared_threshold": "256/81",
+      "strict_gap": "212/81",
+      "u": "FFF",
+      "v": "GGF"
+    },
+    {
+      "centre_u": [
+        "-13/9",
+        "-2/3"
+      ],
+      "centre_v": [
+        "13/9",
+        "2/3"
+      ],
+      "squared_distance": "820/81",
+      "squared_threshold": "256/81",
+      "strict_gap": "188/27",
+      "u": "FFG",
+      "v": "GGF"
+    },
+    {
+      "centre_u": [
+        "-13/9",
+        "-2/3"
+      ],
+      "centre_v": [
+        "5/9",
+        "2/3"
+      ],
+      "squared_distance": "52/9",
+      "squared_threshold": "256/81",
+      "strict_gap": "212/81",
+      "u": "FFG",
+      "v": "GGG"
+    },
+    {
+      "centre_u": [
+        "-5/9",
+        "2/3"
+      ],
+      "centre_v": [
+        "13/9",
+        "-2/3"
+      ],
+      "squared_distance": "52/9",
+      "squared_threshold": "256/81",
+      "strict_gap": "212/81",
+      "u": "FGF",
+      "v": "GFF"
+    },
+    {
+      "centre_u": [
+        "-13/9",
+        "2/3"
+      ],
+      "centre_v": [
+        "13/9",
+        "-2/3"
+      ],
+      "squared_distance": "820/81",
+      "squared_threshold": "256/81",
+      "strict_gap": "188/27",
+      "u": "FGG",
+      "v": "GFF"
+    },
+    {
+      "centre_u": [
+        "-13/9",
+        "2/3"
+      ],
+      "centre_v": [
+        "5/9",
+        "-2/3"
+      ],
+      "squared_distance": "52/9",
+      "squared_threshold": "256/81",
+      "strict_gap": "212/81",
+      "u": "FGG",
+      "v": "GFG"
+    },
+    {
+      "centre_u": [
+        "-5/9",
+        "2/3"
+      ],
+      "centre_v": [
+        "13/9",
+        "2/3"
+      ],
+      "squared_distance": "4",
+      "squared_threshold": "256/81",
+      "strict_gap": "68/81",
+      "u": "FGF",
+      "v": "GGF"
+    },
+    {
+      "centre_u": [
+        "-13/9",
+        "2/3"
+      ],
+      "centre_v": [
+        "13/9",
+        "2/3"
+      ],
+      "squared_distance": "676/81",
+      "squared_threshold": "256/81",
+      "strict_gap": "140/27",
+      "u": "FGG",
+      "v": "GGF"
+    },
+    {
+      "centre_u": [
+        "-13/9",
+        "2/3"
+      ],
+      "centre_v": [
+        "5/9",
+        "2/3"
+      ],
+      "squared_distance": "4",
+      "squared_threshold": "256/81",
+      "strict_gap": "68/81",
+      "u": "FGG",
+      "v": "GGG"
+    },
+    {
+      "centre_u": [
+        "-5/9",
+        "-10/27"
+      ],
+      "centre_v": [
+        "5/9",
+        "-26/27"
+      ],
+      "squared_distance": "1156/729",
+      "squared_threshold": "1024/729",
+      "strict_gap": "44/243",
+      "u": "FFFF",
+      "v": "GFGG"
+    },
+    {
+      "centre_u": [
+        "-5/9",
+        "-26/27"
+      ],
+      "centre_v": [
+        "5/9",
+        "-10/27"
+      ],
+      "squared_distance": "1156/729",
+      "squared_threshold": "1024/729",
+      "strict_gap": "44/243",
+      "u": "FFFG",
+      "v": "GFGF"
+    },
+    {
+      "centre_u": [
+        "-5/9",
+        "-10/27"
+      ],
+      "centre_v": [
+        "5/9",
+        "26/27"
+      ],
+      "squared_distance": "244/81",
+      "squared_threshold": "1024/729",
+      "strict_gap": "1172/729",
+      "u": "FFFF",
+      "v": "GGGF"
+    },
+    {
+      "centre_u": [
+        "-5/9",
+        "-10/27"
+      ],
+      "centre_v": [
+        "5/9",
+        "10/27"
+      ],
+      "squared_distance": "1300/729",
+      "squared_threshold": "1024/729",
+      "strict_gap": "92/243",
+      "u": "FFFF",
+      "v": "GGGG"
+    },
+    {
+      "centre_u": [
+        "-5/9",
+        "-26/27"
+      ],
+      "centre_v": [
+        "5/9",
+        "26/27"
+      ],
+      "squared_distance": "3604/729",
+      "squared_threshold": "1024/729",
+      "strict_gap": "860/243",
+      "u": "FFFG",
+      "v": "GGGF"
+    },
+    {
+      "centre_u": [
+        "-5/9",
+        "-26/27"
+      ],
+      "centre_v": [
+        "5/9",
+        "10/27"
+      ],
+      "squared_distance": "244/81",
+      "squared_threshold": "1024/729",
+      "strict_gap": "1172/729",
+      "u": "FFFG",
+      "v": "GGGG"
+    },
+    {
+      "centre_u": [
+        "-5/9",
+        "26/27"
+      ],
+      "centre_v": [
+        "5/9",
+        "-10/27"
+      ],
+      "squared_distance": "244/81",
+      "squared_threshold": "1024/729",
+      "strict_gap": "1172/729",
+      "u": "FGFF",
+      "v": "GFGF"
+    },
+    {
+      "centre_u": [
+        "-5/9",
+        "26/27"
+      ],
+      "centre_v": [
+        "5/9",
+        "-26/27"
+      ],
+      "squared_distance": "3604/729",
+      "squared_threshold": "1024/729",
+      "strict_gap": "860/243",
+      "u": "FGFF",
+      "v": "GFGG"
+    },
+    {
+      "centre_u": [
+        "-5/9",
+        "10/27"
+      ],
+      "centre_v": [
+        "5/9",
+        "-10/27"
+      ],
+      "squared_distance": "1300/729",
+      "squared_threshold": "1024/729",
+      "strict_gap": "92/243",
+      "u": "FGFG",
+      "v": "GFGF"
+    },
+    {
+      "centre_u": [
+        "-5/9",
+        "10/27"
+      ],
+      "centre_v": [
+        "5/9",
+        "-26/27"
+      ],
+      "squared_distance": "244/81",
+      "squared_threshold": "1024/729",
+      "strict_gap": "1172/729",
+      "u": "FGFG",
+      "v": "GFGG"
+    },
+    {
+      "centre_u": [
+        "-5/9",
+        "26/27"
+      ],
+      "centre_v": [
+        "5/9",
+        "10/27"
+      ],
+      "squared_distance": "1156/729",
+      "squared_threshold": "1024/729",
+      "strict_gap": "44/243",
+      "u": "FGFF",
+      "v": "GGGG"
+    },
+    {
+      "centre_u": [
+        "-5/9",
+        "10/27"
+      ],
+      "centre_v": [
+        "5/9",
+        "26/27"
+      ],
+      "squared_distance": "1156/729",
+      "squared_threshold": "1024/729",
+      "strict_gap": "44/243",
+      "u": "FGFG",
+      "v": "GGGF"
+    },
+    {
+      "centre_u": [
+        "-61/81",
+        "-10/27"
+      ],
+      "centre_v": [
+        "29/81",
+        "-10/27"
+      ],
+      "squared_distance": "100/81",
+      "squared_threshold": "4096/6561",
+      "strict_gap": "4004/6561",
+      "u": "FFFFF",
+      "v": "GFGFF"
+    },
+    {
+      "centre_u": [
+        "-61/81",
+        "-10/27"
+      ],
+      "centre_v": [
+        "61/81",
+        "-10/27"
+      ],
+      "squared_distance": "14884/6561",
+      "squared_threshold": "4096/6561",
+      "strict_gap": "3596/2187",
+      "u": "FFFFF",
+      "v": "GFGFG"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "-10/27"
+      ],
+      "centre_v": [
+        "61/81",
+        "-10/27"
+      ],
+      "squared_distance": "100/81",
+      "squared_threshold": "4096/6561",
+      "strict_gap": "4004/6561",
+      "u": "FFFFG",
+      "v": "GFGFG"
+    },
+    {
+      "centre_u": [
+        "-61/81",
+        "-26/27"
+      ],
+      "centre_v": [
+        "29/81",
+        "-26/27"
+      ],
+      "squared_distance": "100/81",
+      "squared_threshold": "4096/6561",
+      "strict_gap": "4004/6561",
+      "u": "FFFGF",
+      "v": "GFGGF"
+    },
+    {
+      "centre_u": [
+        "-61/81",
+        "-26/27"
+      ],
+      "centre_v": [
+        "61/81",
+        "-26/27"
+      ],
+      "squared_distance": "14884/6561",
+      "squared_threshold": "4096/6561",
+      "strict_gap": "3596/2187",
+      "u": "FFFGF",
+      "v": "GFGGG"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "-26/27"
+      ],
+      "centre_v": [
+        "61/81",
+        "-26/27"
+      ],
+      "squared_distance": "100/81",
+      "squared_threshold": "4096/6561",
+      "strict_gap": "4004/6561",
+      "u": "FFFGG",
+      "v": "GFGGG"
+    },
+    {
+      "centre_u": [
+        "-61/81",
+        "26/27"
+      ],
+      "centre_v": [
+        "29/81",
+        "26/27"
+      ],
+      "squared_distance": "100/81",
+      "squared_threshold": "4096/6561",
+      "strict_gap": "4004/6561",
+      "u": "FGFFF",
+      "v": "GGGFF"
+    },
+    {
+      "centre_u": [
+        "-61/81",
+        "26/27"
+      ],
+      "centre_v": [
+        "61/81",
+        "26/27"
+      ],
+      "squared_distance": "14884/6561",
+      "squared_threshold": "4096/6561",
+      "strict_gap": "3596/2187",
+      "u": "FGFFF",
+      "v": "GGGFG"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "26/27"
+      ],
+      "centre_v": [
+        "61/81",
+        "26/27"
+      ],
+      "squared_distance": "100/81",
+      "squared_threshold": "4096/6561",
+      "strict_gap": "4004/6561",
+      "u": "FGFFG",
+      "v": "GGGFG"
+    },
+    {
+      "centre_u": [
+        "-61/81",
+        "10/27"
+      ],
+      "centre_v": [
+        "29/81",
+        "10/27"
+      ],
+      "squared_distance": "100/81",
+      "squared_threshold": "4096/6561",
+      "strict_gap": "4004/6561",
+      "u": "FGFGF",
+      "v": "GGGGF"
+    },
+    {
+      "centre_u": [
+        "-61/81",
+        "10/27"
+      ],
+      "centre_v": [
+        "61/81",
+        "10/27"
+      ],
+      "squared_distance": "14884/6561",
+      "squared_threshold": "4096/6561",
+      "strict_gap": "3596/2187",
+      "u": "FGFGF",
+      "v": "GGGGG"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "10/27"
+      ],
+      "centre_v": [
+        "61/81",
+        "10/27"
+      ],
+      "squared_distance": "100/81",
+      "squared_threshold": "4096/6561",
+      "strict_gap": "4004/6561",
+      "u": "FGFGG",
+      "v": "GGGGG"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "-122/243"
+      ],
+      "centre_v": [
+        "29/81",
+        "-122/243"
+      ],
+      "squared_distance": "3364/6561",
+      "squared_threshold": "16384/59049",
+      "strict_gap": "13892/59049",
+      "u": "FFFFGF",
+      "v": "GFGFFF"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "-122/243"
+      ],
+      "centre_v": [
+        "29/81",
+        "-58/243"
+      ],
+      "squared_distance": "34372/59049",
+      "squared_threshold": "16384/59049",
+      "strict_gap": "5996/19683",
+      "u": "FFFFGF",
+      "v": "GFGFFG"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "-58/243"
+      ],
+      "centre_v": [
+        "29/81",
+        "-122/243"
+      ],
+      "squared_distance": "34372/59049",
+      "squared_threshold": "16384/59049",
+      "strict_gap": "5996/19683",
+      "u": "FFFFGG",
+      "v": "GFGFFF"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "-58/243"
+      ],
+      "centre_v": [
+        "29/81",
+        "-58/243"
+      ],
+      "squared_distance": "3364/6561",
+      "squared_threshold": "16384/59049",
+      "strict_gap": "13892/59049",
+      "u": "FFFFGG",
+      "v": "GFGFFG"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "-266/243"
+      ],
+      "centre_v": [
+        "29/81",
+        "-266/243"
+      ],
+      "squared_distance": "3364/6561",
+      "squared_threshold": "16384/59049",
+      "strict_gap": "13892/59049",
+      "u": "FFFGGF",
+      "v": "GFGGFF"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "-266/243"
+      ],
+      "centre_v": [
+        "29/81",
+        "-202/243"
+      ],
+      "squared_distance": "34372/59049",
+      "squared_threshold": "16384/59049",
+      "strict_gap": "5996/19683",
+      "u": "FFFGGF",
+      "v": "GFGGFG"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "-202/243"
+      ],
+      "centre_v": [
+        "29/81",
+        "-266/243"
+      ],
+      "squared_distance": "34372/59049",
+      "squared_threshold": "16384/59049",
+      "strict_gap": "5996/19683",
+      "u": "FFFGGG",
+      "v": "GFGGFF"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "-202/243"
+      ],
+      "centre_v": [
+        "29/81",
+        "-202/243"
+      ],
+      "squared_distance": "3364/6561",
+      "squared_threshold": "16384/59049",
+      "strict_gap": "13892/59049",
+      "u": "FFFGGG",
+      "v": "GFGGFG"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "202/243"
+      ],
+      "centre_v": [
+        "29/81",
+        "202/243"
+      ],
+      "squared_distance": "3364/6561",
+      "squared_threshold": "16384/59049",
+      "strict_gap": "13892/59049",
+      "u": "FGFFGF",
+      "v": "GGGFFF"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "202/243"
+      ],
+      "centre_v": [
+        "29/81",
+        "266/243"
+      ],
+      "squared_distance": "34372/59049",
+      "squared_threshold": "16384/59049",
+      "strict_gap": "5996/19683",
+      "u": "FGFFGF",
+      "v": "GGGFFG"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "266/243"
+      ],
+      "centre_v": [
+        "29/81",
+        "202/243"
+      ],
+      "squared_distance": "34372/59049",
+      "squared_threshold": "16384/59049",
+      "strict_gap": "5996/19683",
+      "u": "FGFFGG",
+      "v": "GGGFFF"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "266/243"
+      ],
+      "centre_v": [
+        "29/81",
+        "266/243"
+      ],
+      "squared_distance": "3364/6561",
+      "squared_threshold": "16384/59049",
+      "strict_gap": "13892/59049",
+      "u": "FGFFGG",
+      "v": "GGGFFG"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "58/243"
+      ],
+      "centre_v": [
+        "29/81",
+        "58/243"
+      ],
+      "squared_distance": "3364/6561",
+      "squared_threshold": "16384/59049",
+      "strict_gap": "13892/59049",
+      "u": "FGFGGF",
+      "v": "GGGGFF"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "58/243"
+      ],
+      "centre_v": [
+        "29/81",
+        "122/243"
+      ],
+      "squared_distance": "34372/59049",
+      "squared_threshold": "16384/59049",
+      "strict_gap": "5996/19683",
+      "u": "FGFGGF",
+      "v": "GGGGFG"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "122/243"
+      ],
+      "centre_v": [
+        "29/81",
+        "58/243"
+      ],
+      "squared_distance": "34372/59049",
+      "squared_threshold": "16384/59049",
+      "strict_gap": "5996/19683",
+      "u": "FGFGGG",
+      "v": "GGGGFF"
+    },
+    {
+      "centre_u": [
+        "-29/81",
+        "122/243"
+      ],
+      "centre_v": [
+        "29/81",
+        "122/243"
+      ],
+      "squared_distance": "3364/6561",
+      "squared_threshold": "16384/59049",
+      "strict_gap": "13892/59049",
+      "u": "FGFGGG",
+      "v": "GGGGFG"
+    }
+  ],
+  "family": {
+    "a": [
+      "0",
+      "2/3"
+    ],
+    "b": [
+      "0",
+      "2/3"
+    ],
+    "convention": "J_0(z)=z; J_1(z)=conjugate(z); words compose left to right as maps",
+    "p": 0,
+    "q": 0
+  },
+  "frontier": [],
+  "interpretation": "Every F/G cylinder pair has been excluded by a strict rational inequality; the attractor is disconnected.",
+  "limits": {
+    "max_depth": 8,
+    "max_pairs": 20000
+  },
+  "method": "strict disk separation with equal-length paired cylinder refinement",
+  "result": "DISCONNECTED",
+  "schema": "rational-planar-ifs-exclusion-1",
+  "statistics": {
+    "excluded_leaf_pairs": 52,
+    "frontier_leaf_pairs": 0,
+    "maximum_depth": 6,
+    "split_pairs": 17,
+    "tested_pairs": 69
+  }
+}

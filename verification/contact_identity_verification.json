@@ -1,0 +1,21 @@
+{
+  "method": "exact integer bivariate polynomial cross-multiplication",
+  "checks": [
+    {
+      "addresses": [
+        "12^infinity",
+        "21^infinity"
+      ],
+      "expected": "(c-d)(1-c-d)/((1-c)(1-d))",
+      "passed": true
+    },
+    {
+      "addresses": [
+        "122(21)^infinity",
+        "211(12)^infinity"
+      ],
+      "expected": "(c-d)(1-2cd-cd(c+d))/(1-cd)",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,405 @@
+{
+  "passed": true,
+  "audit_type": "independent geometry derivation plus data consistency; not a new proof of the whole positive raster",
+  "display_module_sha256": "f442268fb2bbf1e1e9c84b269f23e99649895f2a14854dc33262fe794d78d456",
+  "normalization_derivation": "Solve center=(F1(center)+F2(center))/2; d=F2(center)-center; H(z)=(z-center)/d. For DO, b=B*conj(d)/d.",
+  "families": {
+    "DD10": {
+      "comparison_points": 18322,
+      "stable_band_geometry_points": 11700,
+      "maximum_coefficient_error": 0.0,
+      "maximum_translation_error": 2.710809790695294e-15,
+      "maximum_modulus_preservation_error": 0.0,
+      "minimum_exterior_modulus": 1.0000000086602543,
+      "maximum_reciprocal_error": 2.452313651749615e-16,
+      "maximum_atlas_reconstruction_error": 1.3911054626160788e-15,
+      "maximum_torus_radius_roundtrip_error": 8.881784197001252e-16,
+      "maximum_torus_phase_roundtrip_error": 5.551115123125783e-16,
+      "minimum_normalization_displacement": 1.0049875420123384e-08,
+      "probes": [
+        {
+          "probe": "A",
+          "q": [
+            0.5,
+            0.2
+          ],
+          "c1": [
+            -1.7241379310344827,
+            0.6896551724137931
+          ],
+          "c2": [
+            1.7241379310344827,
+            0.6896551724137931
+          ],
+          "weight": 0.5,
+          "rho": 1.8569533817705188,
+          "projection": [
+            2.113084882704383,
+            -0.8452339530817532,
+            -0.6896551724137934
+          ]
+        },
+        {
+          "probe": "B",
+          "q": [
+            0.5,
+            0.4
+          ],
+          "c1": [
+            -1.2195121951219512,
+            0.975609756097561
+          ],
+          "c2": [
+            1.2195121951219512,
+            0.975609756097561
+          ],
+          "weight": 0.5,
+          "rho": 1.5617376188860606,
+          "projection": [
+            2.1711962018659867,
+            -1.7369569614927893,
+            -0.9756097560975607
+          ]
+        },
+        {
+          "probe": "C",
+          "q": [
+            0.34090875,
+            0.43484625
+          ],
+          "c1": [
+            -1.1165985677646855,
+            1.4242776107912876
+          ],
+          "c2": [
+            1.0570956521911627,
+            0.6974361748037641
+          ],
+          "weight": 0.41168488245187984,
+          "rho": 1.490130741201914,
+          "projection": [
+            2.5713959956016335,
+            -1.69652063496881,
+            -1.1727071215549107
+          ]
+        }
+      ],
+      "maximum_coefficient_error_away_from_degenerate_boundary": 0.0,
+      "maximum_translation_error_away_from_degenerate_boundary": 2.710809790695294e-15
+    },
+    "DD11": {
+      "comparison_points": 18322,
+      "stable_band_geometry_points": 11700,
+      "maximum_coefficient_error": 0.0,
+      "maximum_translation_error": 2.8844439820787566e-08,
+      "maximum_modulus_preservation_error": 0.0,
+      "minimum_exterior_modulus": 1.0000000086602543,
+      "maximum_reciprocal_error": 2.452313651749615e-16,
+      "maximum_atlas_reconstruction_error": 1.5553031891404223e-15,
+      "maximum_torus_radius_roundtrip_error": 8.881784197001252e-16,
+      "maximum_torus_phase_roundtrip_error": 5.551115123125783e-16,
+      "minimum_normalization_displacement": 5.773502786965423e-09,
+      "probes": [
+        {
+          "probe": "A",
+          "q": [
+            0.5,
+            0.2
+          ],
+          "c1": [
+            -1.7241379310344827,
+            0.6896551724137931
+          ],
+          "c2": [
+            -1.7241379310344827,
+            -0.6896551724137931
+          ],
+          "weight": 0.5,
+          "rho": 1.8569533817705188,
+          "projection": [
+            -2.113084882704383,
+            0.8452339530817534,
+            -0.6896551724137934
+          ]
+        },
+        {
+          "probe": "B",
+          "q": [
+            0.5,
+            0.4
+          ],
+          "c1": [
+            -1.2195121951219512,
+            0.975609756097561
+          ],
+          "c2": [
+            -1.2195121951219512,
+            -0.975609756097561
+          ],
+          "weight": 0.5,
+          "rho": 1.5617376188860606,
+          "projection": [
+            -2.1711962018659867,
+            1.736956961492789,
+            -0.9756097560975607
+          ]
+        },
+        {
+          "probe": "C",
+          "q": [
+            0.34090875,
+            0.43484625
+          ],
+          "c1": [
+            -1.1165985677646855,
+            1.4242776107912876
+          ],
+          "c2": [
+            -1.0570956521911627,
+            -0.6974361748037641
+          ],
+          "weight": 0.41168488245187984,
+          "rho": 1.490130741201914,
+          "projection": [
+            -2.5713959956016335,
+            1.6965206349688104,
+            -1.1727071215549107
+          ]
+        }
+      ],
+      "maximum_coefficient_error_away_from_degenerate_boundary": 0.0,
+      "maximum_translation_error_away_from_degenerate_boundary": 9.45841633492809e-14
+    },
+    "DO10": {
+      "comparison_points": 18322,
+      "stable_band_geometry_points": 11700,
+      "maximum_coefficient_error": 7.691850857077924e-08,
+      "maximum_translation_error": 8.59975076654344e-08,
+      "maximum_modulus_preservation_error": 4.440892098500626e-16,
+      "minimum_exterior_modulus": 1.0000000086602543,
+      "maximum_reciprocal_error": 7.691850916103794e-08,
+      "maximum_atlas_reconstruction_error": 7.691850853014226e-08,
+      "maximum_torus_radius_roundtrip_error": 8.881784197001252e-16,
+      "maximum_torus_phase_roundtrip_error": 5.551115123125783e-16,
+      "minimum_normalization_displacement": 5.773502564920822e-09,
+      "probes": [
+        {
+          "probe": "A",
+          "q": [
+            0.5,
+            0.2
+          ],
+          "c1": [
+            -1.7241379310344827,
+            0.6896551724137931
+          ],
+          "c2": [
+            1.7241379310344827,
+            0.6896551724137931
+          ],
+          "weight": 0.5,
+          "rho": 1.8569533817705188,
+          "projection": [
+            2.113084882704383,
+            -0.8452339530817532,
+            -0.6896551724137934
+          ]
+        },
+        {
+          "probe": "B",
+          "q": [
+            0.5,
+            0.4
+          ],
+          "c1": [
+            -1.2195121951219512,
+            0.975609756097561
+          ],
+          "c2": [
+            1.2195121951219512,
+            0.975609756097561
+          ],
+          "weight": 0.5,
+          "rho": 1.5617376188860606,
+          "projection": [
+            2.1711962018659867,
+            -1.7369569614927893,
+            -0.9756097560975607
+          ]
+        },
+        {
+          "probe": "C",
+          "q": [
+            0.34090875,
+            0.43484625
+          ],
+          "c1": [
+            -1.1165985677646855,
+            1.4242776107912876
+          ],
+          "c2": [
+            1.2502028384240194,
+            0.20214177846969617
+          ],
+          "weight": 0.41168488245187984,
+          "rho": 1.490130741201914,
+          "projection": [
+            3.041131202980266,
+            -0.4917119454832194,
+            -1.1727071215549107
+          ]
+        }
+      ],
+      "maximum_coefficient_error_away_from_degenerate_boundary": 1.2162584443985894e-13,
+      "maximum_translation_error_away_from_degenerate_boundary": 4.4195304005716443e-13
+    },
+    "DO11": {
+      "comparison_points": 18322,
+      "stable_band_geometry_points": 11700,
+      "maximum_coefficient_error": 4.130268402344377e-15,
+      "maximum_translation_error": 4.500580750355649e-15,
+      "maximum_modulus_preservation_error": 4.440892098500626e-16,
+      "minimum_exterior_modulus": 1.000000008660254,
+      "maximum_reciprocal_error": 4.304286785237187e-15,
+      "maximum_atlas_reconstruction_error": 3.789423922623494e-15,
+      "maximum_torus_radius_roundtrip_error": 8.881784197001252e-16,
+      "maximum_torus_phase_roundtrip_error": 5.551115123125783e-16,
+      "minimum_normalization_displacement": 0.2500098047938236,
+      "probes": [
+        {
+          "probe": "A",
+          "q": [
+            0.5,
+            0.2
+          ],
+          "c1": [
+            -1.7241379310344827,
+            0.6896551724137931
+          ],
+          "c2": [
+            -1.299378227490506,
+            -1.3266092431430576
+          ],
+          "weight": 0.5,
+          "rho": 1.8569533817705188,
+          "projection": [
+            -1.5925039638667353,
+            1.6258780034260685,
+            -0.6896551724137934
+          ]
+        },
+        {
+          "probe": "B",
+          "q": [
+            0.5,
+            0.4
+          ],
+          "c1": [
+            -1.2195121951219512,
+            0.975609756097561
+          ],
+          "c2": [
+            0.011924967738014259,
+            -1.5616920904545646
+          ],
+          "weight": 0.4999999999999999,
+          "rho": 1.5617376188860603,
+          "projection": [
+            0.0212309846213236,
+            2.7804067469288665,
+            -0.9756097560975606
+          ]
+        },
+        {
+          "probe": "C",
+          "q": [
+            0.34090875,
+            0.43484625
+          ],
+          "c1": [
+            -1.1165985677646855,
+            1.4242776107912876
+          ],
+          "c2": [
+            0.04825785874581745,
+            -1.2655195039491234
+          ],
+          "weight": 0.41168488245187984,
+          "rho": 1.490130741201914,
+          "projection": [
+            0.11738773542213363,
+            3.078389148669082,
+            -1.1727071215549107
+          ]
+        }
+      ],
+      "maximum_coefficient_error_away_from_degenerate_boundary": 4.130268402344377e-15,
+      "maximum_translation_error_away_from_degenerate_boundary": 4.500580750355649e-15
+    }
+  },
+  "positive_cell_records": {
+    "DD01": {
+      "path": "figure_sources/zippers/DD01_cells.csv",
+      "sha256": "d84f9380cdac422ff8f0f7b57f0c435d4d8ec485c671e9cec03b2e897ddde335",
+      "positive_cells": 67983,
+      "minimum_squared_gap": 1.7596567734382578e-10,
+      "all_positive_cell_corners_in_strict_lens": true,
+      "all_positive_cell_corners_in_necessary_stability_disk": true
+    },
+    "DD10": {
+      "path": "figure_sources/zippers/DD10_cells.csv",
+      "sha256": "588a17db4dea921e4ddf4d0f9e3ecb3f738e18ab8f708bde2c8f541a55b501f3",
+      "positive_cells": 61958,
+      "minimum_squared_gap": 1.4787536894222577e-10,
+      "all_positive_cell_corners_in_strict_lens": true,
+      "all_positive_cell_corners_in_necessary_stability_disk": true,
+      "positive_cells_after_valid_reflection": 67983,
+      "reflected_mask_matches_saved_mask": true
+    },
+    "DD11": {
+      "path": "figure_sources/zippers/DD11_cells.csv",
+      "sha256": "61198118f54f818f01e935c068d97fdfc0b68a2ef88af342e03a7abbe7927f88",
+      "positive_cells": 69445,
+      "minimum_squared_gap": 2.5954434192121396e-09,
+      "all_positive_cell_corners_in_strict_lens": true,
+      "all_positive_cell_corners_in_necessary_stability_disk": true
+    },
+    "DO10": {
+      "path": "figure_sources/zippers/DO10_cells.csv",
+      "sha256": "ce60a89c4a185aa2481b8dff9ac79fccecdabd84e9f07db98996ea66874338db",
+      "positive_cells": 54692,
+      "minimum_squared_gap": 2.0587340692027702e-10,
+      "all_positive_cell_corners_in_strict_lens": true,
+      "all_positive_cell_corners_in_necessary_stability_disk": true
+    },
+    "DO11": {
+      "path": "figure_sources/zippers/DO11_cells.csv",
+      "sha256": "b4a52f2b589235d9a1c11e46d27d38a56cd5cd97b9c7ed3a2ee538babf62f817",
+      "positive_cells": 56340,
+      "minimum_squared_gap": 3.242666925127324e-11,
+      "all_positive_cell_corners_in_strict_lens": true,
+      "all_positive_cell_corners_in_necessary_stability_disk": true
+    }
+  },
+  "probe_statuses": {
+    "DD10_A": "certified stable",
+    "DD10_B": "certified stable",
+    "DD10_C": "no conclusion from positive test",
+    "DD11_A": "certified stable",
+    "DD11_B": "certified stable",
+    "DD11_C": "certified stable",
+    "DO10_A": "certified stable",
+    "DO10_B": "certified stable",
+    "DO10_C": "proved nonembedded by exact degree certificate, separately replayed",
+    "DO11_A": "certified stable",
+    "DO11_B": "certified stable",
+    "DO11_C": "certified stable"
+  },
+  "scope_limits": [
+    "Only certified cells may be colored as stable.",
+    "Omitted parameters have no classification implied by this positive cover.",
+    "C at DD10 has no injectivity conclusion.",
+    "C at DO10 is nonembedded at the exact parameter; the supplied disk radius is zero.",
+    "The torus projects out w; it is a display chart, and its central hole is not a cavity in the 4D locus."
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "grid": {
+    "Nx": 512,
+    "Ny": 256,
+    "q_rectangle": [
+      0,
+      1,
+      0,
+      0.5
+    ],
+    "cell_width": 0.001953125,
+    "status_semantics": {
+      "stable": "OO00, OO01 and OO10 are exact open stable disks. Five further slices display closed cells proved embedded by outward interval tests; all real intervals are exact.",
+      "unresolved": "No conclusion about injectivity. Four presentations were not covered by the seven-return table.",
+      "nonembedded": "Inside the strict contraction lens and outside or on the common necessary diameter disk; these systems still have connected attractors.",
+      "outside_contraction_lens": "White. Parameters not belonging to the strict contraction domain are not classified as attractors."
+    }
+  },
+  "families": {
+    "DD01": {
+      "file": "DD01_cells.csv",
+      "certified_cells": 67983,
+      "evaluated_cells": 103440,
+      "maximum_word_depth": 40,
+      "minimum_squared_gap": 1.7596567734382578e-10,
+      "sha256": "d84f9380cdac422ff8f0f7b57f0c435d4d8ec485c671e9cec03b2e897ddde335",
+      "certificate_cells_after_reflection": 67983,
+      "display_mode": "certified_cell_cover"
+    },
+    "DD10": {
+      "file": "DD10_cells.csv",
+      "certified_cells": 61958,
+      "evaluated_cells": 103440,
+      "maximum_word_depth": 35,
+      "minimum_squared_gap": 1.4787536894222577e-10,
+      "sha256": "588a17db4dea921e4ddf4d0f9e3ecb3f738e18ab8f708bde2c8f541a55b501f3",
+      "certificate_cells_after_reflection": 67983,
+      "display_mode": "certified_cell_cover"
+    },
+    "DD11": {
+      "file": "DD11_cells.csv",
+      "certified_cells": 69445,
+      "evaluated_cells": 103440,
+      "maximum_word_depth": 16,
+      "minimum_squared_gap": 2.5954434192121396e-09,
+      "sha256": "61198118f54f818f01e935c068d97fdfc0b68a2ef88af342e03a7abbe7927f88",
+      "certificate_cells_after_reflection": 69445,
+      "display_mode": "certified_cell_cover"
+    },
+    "DO10": {
+      "file": "DO10_cells.csv",
+      "certified_cells": 54692,
+      "evaluated_cells": 103440,
+      "maximum_word_depth": 39,
+      "minimum_squared_gap": 2.0587340692027702e-10,
+      "sha256": "ce60a89c4a185aa2481b8dff9ac79fccecdabd84e9f07db98996ea66874338db",
+      "certificate_cells_after_reflection": 54692,
+      "display_mode": "certified_cell_cover"
+    },
+    "DO11": {
+      "file": "DO11_cells.csv",
+      "certified_cells": 56340,
+      "evaluated_cells": 103440,
+      "maximum_word_depth": 17,
+      "minimum_squared_gap": 3.242666925127324e-11,
+      "sha256": "b4a52f2b589235d9a1c11e46d27d38a56cd5cd97b9c7ed3a2ee538babf62f817",
+      "certificate_cells_after_reflection": 56340,
+      "display_mode": "certified_cell_cover"
+    },
+    "OO01": {
+      "file": "OO01_cells.csv",
+      "certified_cells": 71986,
+      "evaluated_cells": 103440,
+      "maximum_word_depth": 40,
+      "minimum_squared_gap": 1.584056402504538e-11,
+      "sha256": "0f22fed5e526d5351102714c8b99918f9613f101291c90f60808b89872f9eee7",
+      "certificate_cells_after_reflection": 71986,
+      "display_mode": "exact_disk",
+      "full_stable_set": "|q-1/2|<1/2",
+      "proof": "Invariant triangle with first-piece intersection exactly q; common necessary-disk theorem.",
+      "proof_label": "thm:oo01-oo10-stable-disks"
+    },
+    "OO10": {
+      "file": "OO10_cells.csv",
+      "certified_cells": 59551,
+      "evaluated_cells": 103440,
+      "maximum_word_depth": 29,
+      "minimum_squared_gap": 2.2895277348906977e-11,
+      "sha256": "5efc747b4748b937d872bf6bfa6a17e14b59004955ebeae01782d6af5f4634a5",
+      "certificate_cells_after_reflection": 71986,
+      "display_mode": "exact_disk",
+      "full_stable_set": "|q-1/2|<1/2",
+      "proof": "Invariant triangle with first-piece intersection exactly q; common necessary-disk theorem.",
+      "proof_label": "thm:oo01-oo10-stable-disks"
+    },
+    "OO00": {
+      "display_mode": "exact_disk",
+      "full_stable_set": "|q-1/2|<1/2",
+      "proof": "Invariant triangle with first-piece intersection exactly q; common necessary-disk theorem.",
+      "proof_label": "prop:oo00-stable-disk"
+    }
+  },
+  "exact_complete_slices": [
+    "OO00",
+    "OO01",
+    "OO10"
+  ],
+  "displayed_computed_inner_covers": [
+    "DD01",
+    "DD10",
+    "DD11",
+    "DO10",
+    "DO11"
+  ],
+  "symmetry_completion": [
+    "DD01 <-> DD10 under q->1-conjugate(q)"
+  ],
+  "retained_unused_display_records": [
+    "OO01/OO10 cell masks and reflection remain valid, but full disks are displayed by theorem."
+  ],
+  "specimens": {
+    "q_exact": [
+      "3/8",
+      "1/4"
+    ],
+    "depth": 16,
+    "vertices_per_curve": 65537,
+    "uniform_tail_bound_numerical": 0.0015197945123009537,
+    "uniform_tail_bound_exact": "(sqrt(29)/8)^16*(sqrt(5)/8)/(1-sqrt(29)/8)",
+    "interpretation": "Canonical polygonal approximants. Three labels follow from exact OO disk theorems and five from independent point certificates, not visual simplicity."
+  },
+  "island": {
+    "q_exact_decimal": [
+      "0.34090875",
+      "0.43484625"
+    ],
+    "point_record": "DD11_island_point.csv",
+    "source": "Danny Calegari, Wiggle Island, arXiv:2205.11442v2, \u00a72.5; disconnected-component assertion is cited, not inferred from this grid."
+  },
+  "implementation": {
+    "interval_verifier": "certify_zipper_cells.cpp",
+    "compiler_flags": "-O2 -std=c++17 -fno-fast-math -ffp-contract=off",
+    "arithmetic": "Outward binary64 intervals using nextafter after every elementary operation; all main-grid q endpoints are exact dyadics."
+  }
+}

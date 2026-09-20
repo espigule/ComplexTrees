@@ -1,0 +1,63 @@
+{
+  "files": [
+    {
+      "byte_reproduction": true,
+      "file": "certificates/quarter_pp.json",
+      "independently_verified": true,
+      "result": "DISCONNECTED",
+      "sha256": "ae19369963dcc647e40343333b1dbc8c1cab0f99e7abdf355a5f2b6158fddb10"
+    },
+    {
+      "byte_reproduction": true,
+      "file": "certificates/imaginary_two_thirds_pp.json",
+      "independently_verified": true,
+      "result": "DISCONNECTED",
+      "sha256": "7a77063b5c93d25f0e5237f4650124126d36b777e1da409662b7f492d626c83e"
+    },
+    {
+      "byte_reproduction": true,
+      "file": "certificates/imaginary_two_thirds_pm.json",
+      "independently_verified": true,
+      "result": "DISCONNECTED",
+      "sha256": "0f6f54bc62a37d90b7baa0dd43e19301f700e3cd2f3cfa8db7ebd8321e570d62"
+    },
+    {
+      "byte_reproduction": true,
+      "file": "certificates/imaginary_two_thirds_mm.json",
+      "independently_verified": true,
+      "result": "DISCONNECTED",
+      "sha256": "56364176f536abf9f8c2aedf4c736a4b807434864d2e2b4f3b2feeb15fa28b76"
+    },
+    {
+      "byte_reproduction": true,
+      "file": "certificates/interval_half_pp.json",
+      "independently_verified": true,
+      "result": "UNRESOLVED",
+      "sha256": "781c8f7e57bfad8ecc985432807d053b58272281c345b7011008510554d3e674"
+    },
+    {
+      "byte_reproduction": true,
+      "file": "certificates/interval_half_pm.json",
+      "independently_verified": true,
+      "result": "UNRESOLVED",
+      "sha256": "60c97600de616b69eeeba7105b755424234f1ac09d9776bee0f7737c56c9b9b0"
+    },
+    {
+      "byte_reproduction": true,
+      "file": "certificates/interval_half_mm.json",
+      "independently_verified": true,
+      "result": "UNRESOLVED",
+      "sha256": "a43c1f551dfd44da97a22ec7c3335a172ac0c2890bd188b7746295efe16cb044"
+    }
+  ],
+  "method": "exact Fraction arithmetic and independent prefix-cover verification",
+  "notation": "q_bound is the common contraction bound, distinct from the established atlas coordinate rho=2/(|a|+|b|)",
+  "python_dependencies": "standard library only",
+  "source_hashes": {
+    "README.md": "e3cc2f354232a00287c4f1d385dffbe3c9cf82f691547f5d3718b579e27409f3",
+    "exact_exclusion.py": "60d050fc3c1c350b32ff977e280cec9bd53f868f132186f89eafd6a561fcd7c6",
+    "test_exact_exclusion.py": "3a9486cd05ad2a5fcc27b16320ff9f26ccba989ce9038667fc1e3ab07272e5b5",
+    "verify_certificate.py": "831eea0f14bba580f724423a9da08a81b680e4337980b7c11f395a05ff382174"
+  },
+  "tests": "six unittest methods passed after notation correction"
+}

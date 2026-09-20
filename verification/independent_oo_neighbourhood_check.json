@@ -1,0 +1,12 @@
+{
+  "independent_contraction_upper_bound": "26517/50000",
+  "independent_cylinder_radius": "28125/46966",
+  "minimum_cross_centre_distance_squared": "17/8",
+  "rational_centre_distance_lower_bound": "14577/10000",
+  "independent_contact_gap_lower_bound": "61061691/234830000",
+  "independent_parameter_radius": "1433911689753/400000000000000",
+  "uniform_neighbourhood_gap_lower_bound": "61061691/469660000",
+  "paragraph_bounds_verified": true,
+  "stored_record_thresholds_checked": true,
+  "scope": "Direct four-disk rational check, independent of producer and checker implementation."
+}

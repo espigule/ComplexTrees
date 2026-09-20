@@ -1,0 +1,30 @@
+{
+  "DD10": {
+    "blocks": 16888,
+    "maximum_sampled_center_chord_discrepancy": 0.0012578364854586093,
+    "maximum_sampled_edge_chord_discrepancy": 0.0013437587043441522,
+    "median_sampled_edge_chord_discrepancy": 2.2447463690420425e-05,
+    "scope": "Binary64 sampled discrepancy, not rigorous interval bound; supports describing the projected faces as approximations."
+  },
+  "DD11": {
+    "blocks": 17248,
+    "maximum_sampled_center_chord_discrepancy": 0.0005862147056057558,
+    "maximum_sampled_edge_chord_discrepancy": 0.0006128189720916328,
+    "median_sampled_edge_chord_discrepancy": 2.226769242942575e-05,
+    "scope": "Binary64 sampled discrepancy, not rigorous interval bound; supports describing the projected faces as approximations."
+  },
+  "DO10": {
+    "blocks": 13566,
+    "maximum_sampled_center_chord_discrepancy": 0.00047975197775787016,
+    "maximum_sampled_edge_chord_discrepancy": 0.0004981150956519404,
+    "median_sampled_edge_chord_discrepancy": 2.3321695366567606e-05,
+    "scope": "Binary64 sampled discrepancy, not rigorous interval bound; supports describing the projected faces as approximations."
+  },
+  "DO11": {
+    "blocks": 13993,
+    "maximum_sampled_center_chord_discrepancy": 0.00012146486765328299,
+    "maximum_sampled_edge_chord_discrepancy": 0.00013028569266598802,
+    "median_sampled_edge_chord_discrepancy": 3.256474166812147e-05,
+    "scope": "Binary64 sampled discrepancy, not rigorous interval bound; supports describing the projected faces as approximations."
+  }
+}

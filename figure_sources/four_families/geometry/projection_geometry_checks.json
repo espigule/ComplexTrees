@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "scope": "Exact rational chart and conjugacy checks plus numerical display checks; not stability certification.",
+  "exact_checks": [
+    {
+      "family": "DD10",
+      "exact_rational_parameters": 1959,
+      "normalization_and_conjugacy": "passed"
+    },
+    {
+      "family": "DD11",
+      "exact_rational_parameters": 1959,
+      "normalization_and_conjugacy": "passed"
+    },
+    {
+      "family": "DO10",
+      "exact_rational_parameters": 1959,
+      "normalization_and_conjugacy": "passed"
+    },
+    {
+      "family": "DO11",
+      "exact_rational_parameters": 1959,
+      "normalization_and_conjugacy": "passed"
+    }
+  ],
+  "rational_parameters_per_family": 1959,
+  "total_exact_normalizations": 7836,
+  "binary64_maximum_errors": {
+    "coefficients": 5.504288250186802e-15,
+    "atlas_roundtrip": 1.3232745389513375e-15,
+    "torus_inverse": 8.881784197001252e-16,
+    "phase_lattice_invariance": 8.826273045769994e-15,
+    "exterior_radial_coordinates": 1.1102230246251565e-15
+  },
+  "projection": "X=(4+rho*cos(theta1))*cos(theta2); Y=(4+rho*cos(theta1))*sin(theta2); Z=rho*sin(theta1)",
+  "fourth_coordinate": "w, separately encoded; projection is injective after fixing w and orientation type on the displayed connectedness band 0<rho<=2 (not the unbounded full atlas)."
+}

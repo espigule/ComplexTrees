@@ -1,0 +1,77 @@
+{
+  "verified": true,
+  "certificates": [
+    {
+      "verified": true,
+      "family": "DO10",
+      "q": {
+        "real": "272727/800000",
+        "imag": "347877/800000"
+      },
+      "parameter_disk_radius": "0",
+      "certificate_sha256": "0584029960a9e98d31f1907d05f6c19fbf8000555d9d47dac65811e6d8af4a8a",
+      "source_intervals": [
+        [
+          "33/128",
+          "67/256"
+        ],
+        [
+          "2303/4096",
+          "9/16"
+        ]
+      ],
+      "words": {
+        "u": "00011100",
+        "v": "101101111111"
+      },
+      "all_decisions_exact": true,
+      "degree": -1,
+      "winding_ray": "negative imaginary ray; exact half-open crossing convention",
+      "accepted_cylinders": 46,
+      "visited_cylinders": 88,
+      "maximum_word_depth": 20,
+      "sides": [
+        {
+          "side": 0,
+          "root_word": "00011100",
+          "leaves": 4,
+          "tree_nodes": 7,
+          "exact_unit_interval_partition": true,
+          "endpoint_chain_verified": true
+        },
+        {
+          "side": 1,
+          "root_word": "101101111111",
+          "leaves": 6,
+          "tree_nodes": 11,
+          "exact_unit_interval_partition": true,
+          "endpoint_chain_verified": true
+        },
+        {
+          "side": 2,
+          "root_word": "00011100",
+          "leaves": 16,
+          "tree_nodes": 31,
+          "exact_unit_interval_partition": true,
+          "endpoint_chain_verified": true
+        },
+        {
+          "side": 3,
+          "root_word": "101101111111",
+          "leaves": 20,
+          "tree_nodes": 39,
+          "exact_unit_interval_partition": true,
+          "endpoint_chain_verified": true
+        }
+      ],
+      "invariant_disk_radius_upper": "552548673843/420769127750",
+      "uniform_boundary_motion_upper": "0",
+      "minimum_squared_disk_clearance": "1212627558988120076103260778321439974995013047431181665090198903398491900190159396471456187049672269888119774541745835881435016995745644150505326372291774228254749315298566111847099115009009942350738464801899191570476003723918403310791923215230939121147268425155722096490117823620931271575069440602467623837733011982107720597351007109971075569801329591/836079207739918119423239360911639576576000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "minimum_squared_disk_clearance_decimal": 1.45037401691412e-06,
+      "minimum_polygon_distance_squared": "783244071354460133381493046143557087226018688208648823946687239942602256002315472640844859331881258264521861124205370959873783675974876759790049412676765555576741577949/37778931862957161709568000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "minimum_polygon_distance_squared_decimal": 2.073229794308831e-05,
+      "scope": "Canonical zipper noninjective throughout the stated closed parameter disk; no island assertion",
+      "runtime_seconds": 0.013722438998229336
+    }
+  ]
+}

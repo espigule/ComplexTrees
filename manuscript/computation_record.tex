@@ -1,0 +1,54 @@
+The reference computation uses rational complex coefficients and exact rational
+comparisons. Let $r_*<1$ be a rational upper bound for both contraction ratios,
+verified by comparing their squared moduli with $r_*^2$, and put
+$R_*=(1-r_*)^{-1}$. For equal-length words $u,v$ of length $n$, with opposite
+first symbols, write $c_u=S_u(0)$ and $c_v=S_v(0)$. The pair is excluded only if
+\begin{equation}\label{eq:exact-disk-exclusion}
+|c_u-c_v|^2>(2r_*^nR_*)^2.
+\end{equation}
+The two cylinder images lie in the corresponding enclosing disks, so this
+strict inequality is a sufficient separation certificate.
+
+The search starts with the first-piece pair, discards excluded pairs, and
+otherwise branches over all four choices of appended letters. Complete finite
+exhaustion certifies disconnection. A depth or pair limit leaves an unresolved
+frontier. The output records all excluded and unresolved leaves, together with
+the exact squared distances and bounds. The independent verifier reconstructs
+cylinder centres by evaluating the letters from right to left and checks both
+the inequalities and the complete four-child covering tree. It imports no
+producer code.
+
+Table~\ref{tab:exact-benchmarks} gives the completed benchmark runs. The depth
+limit was 8 and the pair limit 20,000. Each row applies separately to every
+orientation type listed. All resulting records passed the standalone verifier.
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}llrrrl@{}}
+\toprule
+Coefficients $a=b$ & Orientation types & Depth & Tests & Excluded & Output\\
+\midrule
+$1/4$ & $(+,+)$ & 1 & 1 & 1 & Disconnected\\
+$2i/3$ & $(+,+),(+,-),(-,-)$ & 6 & 69 & 52 & Disconnected\\
+$1/2$ & $(+,+),(+,-),(-,-)$ & 8 & 29 & 21 & Unresolved\\
+\bottomrule
+\end{tabular}
+\caption{Exact rational exclusion experiments. Depth counts the full cylinder
+word length, including its first symbol. Each $2i/3$ run has 17 split pairs and
+no surviving frontier; each $1/2$ run has seven split pairs and one surviving
+frontier pair. ``Excluded'' counts leaf pairs, not parameters.}
+\label{tab:exact-benchmarks}
+\end{table}
+
+For $a=b=1/2$, the elementary interval identity
+$S_1([-2,2])=[-2,0]$ and $S_2([-2,2])=[0,2]$ proves that the attractor is
+$[-2,2]$ in each orientation type. Thus the unresolved search output is
+consistent with a separate exact connectedness proof. The experiment checks
+the one-sided logic of exclusion; it does not implement a global classification
+of the atlas.
+
+The \texttt{computation/} directory contains the producer
+\path{exact_exclusion.py} and the independent verifier
+\path{verify_certificate.py}. The seven JSON records and their
+summary are in \path{computation/certificates/}. These small examples establish
+a reproducible starting point for the computational method. Larger frontier
+claims require their own complete certificates or a proved positive criterion.

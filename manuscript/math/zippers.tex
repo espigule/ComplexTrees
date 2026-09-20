@@ -1,0 +1,212 @@
+\section{Zippers: endpoint structure and the binary atlas}
+\label{sec:core-zippers}
+
+The endpoint signature and the plane-orientation type are independent.
+To keep their roles explicit, use bits $e_j\in\{0,1\}$ for endpoint
+reversal and signs $\kappa_j\in\{+,-\}$ for plane orientation.
+
+\begin{proposition}[General planar similarity zippers]
+\label{prop:general-zipper}
+Let $z_0=0,z_1,\ldots,z_m=1$ satisfy
+$0<|z_j-z_{j-1}|<1$, and prescribe $e_j,\kappa_j$. The maps
+\begin{equation}\label{eq:general-zipper}
+F_j(t)=z_{j-1+e_j}+(-1)^{e_j}(z_j-z_{j-1})J_{\kappa_j}(t)
+\end{equation}
+form a zipper. For any partition
+$0=t_0<t_1<\cdots<t_m=1$, there is a unique continuous map
+$\zeta:[0,1]\to\C$ with $\zeta(0)=0,\zeta(1)=1$ such that
+\[
+\zeta\circ h_j=F_j\circ \zeta,
+\]
+where $h_j$ maps $[0,1]$ affinely onto $[t_{j-1},t_j]$ and reverses
+endpoint order exactly when $e_j=1$. Its image is the IFS attractor.
+Conversely, every planar similarity zipper with marked ordered
+endpoints and vertices takes this form after endpoint normalization.
+\end{proposition}
+\begin{proof}
+Formula~\eqref{eq:general-zipper} maps its ordered endpoints to
+$z_{j-1},z_j$ with the indicated reversal. Define an operator on
+the complete space of continuous maps with endpoint values $0,1$
+by $(T\zeta)\circ h_j=F_j\circ \zeta$. The endpoint identities ensure that
+the pieces agree at every partition point and retain the outer
+endpoints. Its sup-norm contraction ratio is
+$\max_j|z_j-z_{j-1}|<1$, so it has a unique fixed map $\zeta$.
+The compact set $\zeta([0,1])$ is invariant under the IFS, and therefore
+is its attractor. Conversely, an endpoint-normalized similarity has
+coefficient and translation determined by its two endpoint values
+and its plane orientation, giving the formula.
+\end{proof}
+
+This is the standard zipper construction \cite{Aseev2003}. It
+covers any finite number of maps, but only the binary case lies
+in the four-dimensional atlas. An attractor that is a Jordan arc
+does not necessarily make its given generators a zipper: the two
+interval maps $0.6t$ and $0.6t+0.4$, for instance, have attractor
+$[0,1]$ with an overlap interval between their pieces.
+
+Let $\tau:\Sigma_m\to[0,1]$ be the coding map for $h_j$. Then
+$\pi_p=\zeta_p\circ\tau$, so $\Ker\tau\subseteq\Ker\pi_p$ for every
+zipper with this partition and endpoint signature. The canonical
+zipper curve is embedded exactly when these kernels are equal.
+This distinguishes the canonical embedded-curve locus from the
+weaker property that the unparameterized attractor happens to be
+a Jordan arc. It also gives a precise meaning to having only the
+prescribed endpoint identifications.
+
+For $m=2$, write $q=z_1$ and
+$\Omega=\{q:|q|<1,\ |1-q|<1\}$. Formula~\eqref{eq:general-zipper}
+becomes
+\begin{equation}\label{eq:binary-endpoint-zipper}
+F_1(t)=e_1q+(-1)^{e_1}qJ_{\kappa_1}(t),\qquad
+F_2(t)=q+e_2(1-q)+(-1)^{e_2}(1-q)J_{\kappa_2}(t).
+\end{equation}
+Thus each fixed binary signature and plane-orientation choice has
+one complex endpoint parameter, independently of the full four-real-
+dimensional parameter domain of binary systems.
+
+\begin{theorem}[The binary zipper surfaces]\label{thm:zipper-surfaces}
+Fix the plane-orientation type and an endpoint signature
+$e=(e_1,e_2)$. Within the canonical translation chart, the systems
+admitting this marked ordered zipper structure form an embedded
+real-analytic surface parametrized by $q\in\Omega$. It is relatively
+real algebraic. In the direct--direct class these four surfaces are
+exactly
+\begin{equation}\label{eq:four-planes}
+\begin{array}{c|c}
+(e_1,e_2)&\text{coefficient equation}\\\hline
+(0,0)&a+b=1\\
+(0,1)&a-b=1\\
+(1,0)&-a+b=1\\
+(1,1)&a+b=-1.
+\end{array}
+\end{equation}
+For the other plane-orientation types, the same equations hold in
+the endpoint coefficient chart defined in the proof, but need not
+be literal affine planes in the canonical translation coefficients.
+\end{theorem}
+
+\begin{proof}
+For an arbitrary normalized pair $S_1,S_2$, the outer endpoints
+$u,v$ required by the selected signature are uniquely determined:
+\[
+\begin{array}{c|cc}
+e&u&v\\\hline
+(0,0)&\Fix S_1&\Fix S_2\\
+(0,1)&\Fix S_1&S_2(u)\\
+(1,0)&S_1(v)&\Fix S_2\\
+(1,1)&\Fix(S_1S_2)&S_2(u).
+\end{array}
+\]
+They are distinct: equality in any row would give a common fixed
+point of $S_1,S_2$. Set $d=v-u$ and conjugate by $t\mapsto u+dt$.
+The two maps in these endpoint coordinates have the form
+\begin{equation}\label{eq:endpoint-chart}
+\widehat S_1(t)=A J_{\kappa_1}(t)-e_1A,\qquad
+\widehat S_2(t)=B J_{\kappa_2}(t)+1-(1-e_2)B,
+\end{equation}
+where $A=a$ for $\kappa_1=+$ and
+$A=a\overline d/d$ for $\kappa_1=-$, and similarly for $B$.
+
+For each signature, the transformation $(a,b)\mapsto(A,B)$ is a
+real-analytic diffeomorphism of the punctured contraction bidisk. To prove
+surjectivity and the inverse, start with arbitrary $(A,B)$ in the
+punctured bidisk and the maps~\eqref{eq:endpoint-chart}. The indicated outer
+endpoint identities hold at $0,1$. These maps cannot have a common
+fixed point: in each of the four rows the unique fixed points or
+alternating two-cycle force the distinct outer endpoints. Apply
+Proposition~\ref{prop:canonical-normalization} to recover a canonical
+pair. Taking its signature endpoints returns the original chart,
+so the two constructions are inverse. All fixed-point operations
+are real rational by the formulas in
+Proposition~\ref{prop:address-regularity}. The average-map fixed
+point used in canonical normalization is also real rational: if
+its linear part is $cz+d\overline z$, then $|c|+|d|<1$, and its
+fixed point is obtained by an invertible two-by-two real linear
+system. Thus these inverse changes of chart are real rational,
+with no vanishing denominator in the contraction domain.
+
+The two inner endpoints in~\eqref{eq:endpoint-chart} agree exactly
+when
+\[
+(-1)^{e_1}A+(-1)^{e_2}B=1.
+\]
+This is a smooth complex affine plane intersected with the bidisk,
+parametrized by $A=(-1)^{e_1}q$ and
+$B=(-1)^{e_2}(1-q)$ for $q\in\Omega$. Pulling back through the
+real-rational diffeomorphism proves the surface and algebraicity
+assertions. In the direct--direct class $A=a,B=b$, which gives
+\eqref{eq:four-planes}.
+\end{proof}
+
+\begin{proposition}[Embedded binary zippers]\label{prop:binary-embedding}
+For the binary zipper~\eqref{eq:binary-endpoint-zipper}, its canonical
+curve $\zeta$ is injective if and only if
+$F_1K\cap F_2K=\{q\}$.
+\end{proposition}
+\begin{proof}
+Necessity follows by applying injectivity to the two closed
+partition intervals. Conversely suppose the intersection is
+$\{q\}$. Since $q\ne0,1$, the point $0$ belongs only to the first
+piece, and $1$ only to the second. Let $E_j=\zeta^{-1}(j)$ for $j=0,1$.
+The endpoint equations express each $E_j$ as an affine contracting
+image, under an appropriate interval map $h_i$, of one of $E_0,E_1$.
+For signature $(0,0)$ both sets are self-images; for $(0,1)$ the
+first is a self-image and determines the second; for $(1,0)$ the
+reverse holds; and for $(1,1)$ composing the two equations gives
+a strict contracting self-image for each set. In all cases
+compactness gives $E_0=\{0\}$ and $E_1=\{1\}$, using the prescribed
+endpoint values.
+
+If two different interval parameters had the same image, remove
+their longest common interval-cylinder prefix. At the first
+separation their images lie in the two first-level pieces, hence
+equal $q$. Inverting the corresponding injective planar map sends
+this equality to an endpoint. At least one preimage parameter is
+not the partition endpoint, contradicting the uniqueness just
+proved. Hence $\zeta$ is injective.
+\end{proof}
+
+All binary zipper surfaces lie in $\cM$, regardless of embeddedness.
+For $q\in(0,1)$, the endpoint maps act on the real interval as two
+consecutive subinterval maps; their canonical curve is a
+homeomorphism. Thus over a whole binary zipper surface the forced
+kernel is exactly $\Ker\tau$, and its structural stable set is
+the canonical embedded-zipper locus. This does not prove that this
+locus is connected, or that its components remain distinct after
+leaving the surface.
+
+\subsection{The wiggle slice and the historical tree chart}
+
+For plane orientation $(+,+)$ and endpoint signature $(1,1)$,
+equation~\eqref{eq:binary-endpoint-zipper} gives Calegari's maps
+\[
+f_q(t)=-qt+q,\qquad g_q(t)=(q-1)t+1.
+\]
+Their canonical translation coefficients are $a=-q,b=q-1$.
+More explicitly, with $Q(q)=q^2-q+1$,
+\[
+H_q(t)=\frac{3t-(1+q)}{Q(q)}
+\]
+conjugates this pair to $-1-qt$ and $1+(q-1)t$.
+The zeros of $Q$ are $(1\pm i\sqrt3)/2$, on the excluded
+contraction boundary, so this change is valid throughout $\Omega$.
+Calegari proves that the embedded-curve locus on this slice is
+disconnected \cite{Calegari2026}. Every attractor on the slice is
+connected; the disconnected locus in that result is a parameter
+space of embeddings, not a family of disconnected attractors.
+
+The common-translation complex-tree maps $1-qt$ and $1+(q-1)t$
+are conjugate to $f_q,g_q$ through
+\[
+J_q(t)=\frac{(q^2-q+1)t+q-1}{2q-1},\qquad q\ne\tfrac12.
+\]
+At $q=1/2$ the tree maps coincide and their attractor is
+$\{2/3\}$; the endpoint-normalized wiggle remains $[0,1]$.
+This is a genuine chart degeneration. It does not affect the
+identification at nonreal island parameters, but must be retained
+when comparing the entire families. Disconnectedness of an
+embedded-curve locus on this two-dimensional surface does not
+imply disconnectedness of an embedding locus in the ambient atlas.
+
+
+\input{math/stable_zipper_slices.tex}

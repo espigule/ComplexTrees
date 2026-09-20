@@ -1,0 +1,40 @@
+\begin{lemma}[Persistence of a positive contact gap]
+\label{lem:contact-gap-persistence}
+Fix the plane orientations and let the two coefficient pairs $\lambda$ and
+$\mu$ have contraction ratios at most $\bar q<1$. Put
+$\eta=\max_j|\lambda_j-\mu_j|$. For the corresponding attractors and
+first-piece distances,
+\[
+ d_H(K_\lambda,K_\mu)\leq\frac{\eta}{(1-\bar q)^2},\qquad
+ |\delta(\lambda)-\delta(\mu)|\leq\frac{2\eta}{(1-\bar q)^2}.
+\]
+If $\delta(\lambda)\ge d_0>0$ and
+$\eta\le d_0(1-\bar q)^2/4$, then $K_\mu$ is disconnected with first-piece
+gap at least $d_0/2$.
+\end{lemma}
+\begin{proof}
+Both attractors lie in the disk of radius $R=(1-\bar q)^{-1}$. Their
+Hutchinson operators differ by at most $\eta R$ on every compact subset of
+this disk. The contraction estimate therefore gives
+\[
+ d_H(K_\lambda,K_\mu)
+ \leq\bar q\,d_H(K_\lambda,K_\mu)+\eta R,
+\]
+which proves the first bound. Either corresponding first-level piece is
+displaced by at most
+$\bar q\,d_H(K_\lambda,K_\mu)+\eta R\le\eta/(1-\bar q)^2$.
+The distance between two compact sets changes by at most the sum of their
+Hausdorff displacements, proving the second bound and its consequence.
+\end{proof}
+
+For a rational centre with a rational verified gap bound $d_0>0$, let $q<1$ be a rational outward
+bound for both multiplier moduli and put $\bar q=(1+q)/2$. The radius
+\begin{equation}\label{eq:rational-neighbourhood-radius}
+ \eta_0=\min\left\{\frac{1-q}{2},\,
+           \frac{d_0(1-\bar q)^2}{4},\,
+           \frac12\min_j\max(|\Re\lambda_j|,|\Im\lambda_j|)\right\}
+\end{equation}
+defines a closed product of complex disks
+$|\mu_j-\lambda_j|\le\eta_0$ lying in the punctured contraction bidisk.
+Every parameter in this product has gap at least $d_0/2$. Its interior is
+an explicit open disconnected region in four real dimensions.

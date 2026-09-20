@@ -1,0 +1,14 @@
+{
+  "family": "DO10",
+  "q": [
+    0.34090875,
+    0.43484625
+  ],
+  "u": "00011100",
+  "v": "101101111111",
+  "polygon_depth": 12,
+  "numerical_degree": -1,
+  "numerical_clearance": 0.004553273321808061,
+  "numerical_tail": 0.0037195016680569852,
+  "visits": 11759
+}

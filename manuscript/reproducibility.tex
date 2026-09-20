@@ -1,0 +1,185 @@
+\section{Reproducibility and exact computation records}
+\label{app:reproducibility}
+
+The companion reproducibility archive separates the mathematical record from the
+current browser interface. It contains the figure-generation records, exact
+certificates, and public assets from which the scientific plates are recomposed;
+the arXiv source retains the files required to compile this article and the
+small exact certificate suite used below. The study uses all length-22 addressed centres
+for each attractor. Its preserved density rasters and atlas rendering are
+recomposed without asserting that the global radial survey has been rerun.
+The independent overlay script reconstructs each finite convex hull and checks
+the multipliers, branch fixed points and analytic tail formulas against the
+stored record. These are floating-point consistency checks.
+
+The inspected companion snapshot is dated 18 September 2026. A source manifest
+records the original URL, byte size and SHA--256 digest of the inspected
+modules. The principal mathematical implementations are the family registry,
+the semilinear prefix renderer and the radial worker. The DD laboratory's
+$43\,173$-ray data record reassembles to 5,913,659 bytes, with SHA--256 digest
+\begin{center}\footnotesize\ttfamily
+5d833a368c0a43405d512ecd0e5a7a53c\linebreak
+ddd19a019142b9ed9f6f05e94a64af9.
+\end{center}
+The manifest distinguishes this frozen record from later changes to the public
+interface. The detailed laboratory's source and data harness passed 73 checks;
+its grid, picking and session harness passed 3,381 enumerated checks. These
+results concern the inspected code and data, and are not frame-rate measurements.
+
+\subsection{A small exact benchmark suite}
+\input{computation_record.tex}
+
+\subsection{Parameter-neighbourhood proof objects}
+The companion's version~2.0.0 rational producer and independent checker are
+included under \path{computation/neighbourhood/}. Their exact inputs specify the
+two multipliers as decimal or fraction strings and the two orientation bits.
+The producer uses individual rational outward bounds for word contractions;
+the checker reconstructs the affine maps with rational real matrices and checks
+the complete prefix cover. It then verifies the positive-gap neighbourhood from
+Lemma~\ref{lem:contact-gap-persistence}. Its 23-test suite includes independent
+exact-family benchmarks and rejection of incomplete or altered proof objects.
+
+For example, the opposite--opposite parameter
+$a=b=3(1+i)/8$ is certified by four cover leaves of word length two.
+The exact checked gap exceeds $13/50$ and the parameter radius exceeds
+$1/300$. Consequently the complete product
+\[
+ |a'-3(1+i)/8|\le1/300,\qquad |b'-3(1+i)/8|\le1/300
+\]
+has disconnected attractors with first-piece gap at least $13/100$.
+The companion archive retains both the proof object and the independently checked record.
+
+The two producers use the same mathematical separation criterion but different
+schemas and enclosure choices. Each proof object identifies its producer and
+is checked with the matching standalone checker. Rounding a trigonometric
+coefficient supplies an exact rational centre different from the intended
+trigonometric parameter; transferring a neighbourhood claim to the latter
+requires rigorous containment. The companion archive's README gives the complete commands for the manuscript, figures and exact checks.
+
+
+\subsection{The four-family exterior comparison}
+\label{app:zipper-computation}
+Figures~\ref{fig:zipper-stable-atlas}--\ref{fig:zipper-do-gallery}
+transform positive certificates from a $512\times256$ dyadic grid
+on $[0,1]\times[0,1/2]$ in the endpoint $q$ plane. Each cell has side
+$1/512$. The original endpoint-return calculation used a budget of
+$12\,000$ cylinder-pair visits and maximum word length 40. Success
+means that \emph{every parameter} in the closed cell is embedded.
+A computation that does not finish gives no membership conclusion.
+The selected covers are DD10, DD11, DO10 and DO11. The DD10 record
+also includes cells obtained from DD01 by the exact reflected
+symmetry $q\mapsto1-\overline q$; the duplicate family is omitted
+from the figures. Complex conjugation supplies the reflected
+lower-half cover in the three-dimensional placement. The unpainted
+background carries no membership label. Exact OO stable-disk
+classifications are proved in the text and are not drawn in this
+four-family comparison.
+
+The planar coordinate is $c=1/q$; the three-dimensional position
+uses the canonical coefficients of
+Proposition~\ref{prop:four-exterior-surfaces}, not just the endpoint
+multipliers. Both transformations are applied to the saved positive
+cells. The exterior panels retain the full $512\times256$ positive
+mask, clipped to $[0.96,4.65]\times[-2.70,0.13]$ in the $c$ plane.
+The unbounded tail near $q=0$ lies beyond this window. For the
+three-dimensional mesh, a $2\times2$ block is included only when
+all four original closed cells are certified; this thinning can
+omit positive cells but does not bridge uncertified gaps. The
+figure mesh approximates the curved images of those blocks. Exact
+cell coordinates and membership certificates are retained
+separately. The colour coordinate is $w$. The projection and image-generation
+records are retained in the companion archive under \path{figure_sources/four_families/}.
+
+The interval implementation uses IEEE binary64 arithmetic with outward
+\texttt{nextafter} bounds, including contraction norms, invariant radii,
+cylinder centres and squared separation. Its recorded build uses GCC
+13.3.0, with fast-math and fused contraction disabled. Gradual underflow
+and correctly rounded elementary operations, including square root, are
+assumed. An independent integer-polynomial checker verifies all fourteen
+common-return identities. A separate compilation reproduced the saved
+island-rectangle calculation; this is a replay of the same interval
+implementation, rather than a second numerical algorithm. The complete commands, exact parsed bounds, per-cell outcomes and file hashes are retained in the companion archive under
+\path{figure_sources/zippers/zipper_stability_run_manifest.json}.
+
+For the curve examples, iterate the zipper operator from the identity
+map on $[0,1]$ with equal partition intervals. Write
+$r=\max\{|q|,|1-q|\}$. The first polygon differs from the identity by at
+most $|q-1/2|$, so the depth-$n$ polygon $\zeta_n$ satisfies
+\[
+ \|\zeta-\zeta_n\|_\infty
+ \le \frac{r^n|q-1/2|}{1-r}.
+\]
+The figures use the three shared probes in
+\eqref{eq:three-shared-zipper-probes}. At $q_A$ and $q_B$, depth 20
+gives $1\,048\,577$ vertices, with respective uniform bounds
+$1.824\times10^{-6}$ and $1.493\times10^{-4}$.
+
+At $q_C$ the two contraction ratios differ substantially, so an
+adaptive prefix partition gives a better display for the same
+number of segments. First bound
+$E=\|\zeta-\operatorname{id}\|_\infty$ using the exact depth-14
+polygon and the tail estimate above: the maximum norm of its
+difference from the identity occurs at a polygon vertex. On a
+source cylinder with $m$ occurrences of the first symbol and $n$
+of the second,
+the endpoint chord then has parametrized error at most
+$|q_C|^m|1-q_C|^n E$. Subdivide until a rational upper bound for
+this product is at most $1/2000$. The leaves form an exact
+partition of $[0,1]$, and all four curves have uniform error
+strictly less than $5\times10^{-4}$ in exact arithmetic.
+The vertex counts and source depths are
+\begin{center}
+\begin{tabular}{lrr}
+Family&Vertices&Source depths\\\hline
+DD10&$724\,014$&13--31\\
+DD11&$473\,538$&12--30\\
+DO10&$462\,020$&12--30\\
+DO11&$1\,692\,525$&14--34
+\end{tabular}
+\end{center}
+The plotted coordinates are evaluated in binary64; the analytic
+error bounds exclude this final floating-point evaluation and
+rasterization. Exact stopping decisions, source-partition checks
+and the resulting arrays are retained in the companion archive under
+\path{figure_sources/four_families/specimen_checks/}.
+Drawing a polygon without visible crossings is not used as a
+positive certificate. Ten
+positive interval records certify $q_A,q_B$ in all four families
+and $q_C$ in DD11 and DO11. Each test applies to a closed dyadic
+box of side $2^{-34}$ containing the stated exact rational
+parameter, with a budget of $2\,000\,000$ cylinder-pair visits
+and maximum word length 100.
+
+An additional exact calculation proves that the DO10 canonical
+curve at $q_C$ is nonembedded. With letters $0,1$ denoting the
+first and second maps, respectively, take words
+$u=00011100$ and $v=101101111111$. Their closed parameter intervals
+are $[33/128,67/256]$ and $[2303/4096,9/16]$, which are disjoint.
+For $G(s,t)=F_u\zeta(s)-F_v\zeta(t)$ on $[0,1]^2$, a cover by
+46 cylinder enclosures keeps its boundary away from zero and
+certifies boundary degree $-1$. Nonzero degree supplies a zero
+of $G$, hence an identification between the two disjoint
+parameter intervals. The coefficient arithmetic and strict
+disk-separation comparisons are rational; an independent checker
+reconstructs the enclosures and computes winding using a
+different ray. The proof object and replay record accompany the positive probe records in the companion archive under
+\path{figure_sources/four_families/specimen_checks/}. No conclusion
+about DD10 at $q_C$ follows from its capped positive test.
+
+Finally, the small DD11 square
+\[
+\begin{split}
+0.3409082591533661&\le\Re q\le0.3409092128276825,\\
+0.4348457604646683&\le\Im q\le0.4348467141389847
+\end{split}
+\]
+uses the exact dyadic endpoints recorded in hexadecimal in the run
+manifest; the displayed decimals are their round-trip representations.
+All $64^2=4096$ cells of side $2^{-26}$ pass, with a budget of
+$150\,000$ visits per cell and maximum word length 64. This proves
+embeddedness throughout the square, which contains Calegari's rational
+island parameter $L=0.34090875+0.43484625i$. Its membership in a component
+separate from the real interval follows from the cited island theorem,
+not from this local calculation. The whole square has side $2^{-20}$;
+it is too small to see in the common-scale atlas and is not intended
+as a depiction of the island boundary.

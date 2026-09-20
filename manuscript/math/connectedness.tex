@@ -1,0 +1,110 @@
+\section{Connectedness, contact and rigorous radial bounds}
+\label{sec:core-connectedness}
+
+Fix a plane-orientation type and write $S_1(z)=-1+aJ_{\kappa_1}(z)$,
+$S_2(z)=1+bJ_{\kappa_2}(z)$. Let $K_p$, $p=(a,b)$, be the compact
+attractor. Define
+\[
+\cM=\{p\in\mathcal P:K_p\text{ is connected}\},\qquad
+\delta(p)=\dist(S_1K_p,S_2K_p).
+\]
+All parameter-space boundaries and closures below are relative to
+the strict contraction domain unless another ambient space is stated.
+
+\begin{proposition}[Binary contact criterion]\label{prop:binary-contact}
+The attractor $K_p$ is connected if and only if
+$S_1K_p\cap S_2K_p\ne\varnothing$, equivalently $\delta(p)=0$.
+The function $\delta$ is continuous. Hence $\cM$ is relatively closed
+and its complement is open.
+\end{proposition}
+
+\begin{proof}
+Necessity follows because a union of two disjoint nonempty compact
+sets is disconnected. For sufficiency, put $B=\operatorname{conv}(K_p)$
+and $B_{n+1}=S_1B_n\cup S_2B_n$, starting at $B_0=B$.
+The sets $B_n$ are nested compact sets containing $K_p$. They are
+connected by induction: both images of a connected $B_n$ are
+connected, and their intersection contains $S_1K_p\cap S_2K_p$.
+They converge in Hausdorff distance to $K_p$, so their intersection
+is connected. This is the binary instance of Hata's graph criterion
+\cite{Hata1985}.
+
+Locally in parameter space, all contraction ratios have a common
+upper bound $r<1$. The associated operators on compact sets are
+uniform contractions in Hausdorff distance, and their maps vary
+continuously with $p$. The fixed compact sets therefore vary
+continuously. Taking continuous images and then the distance between
+two nonempty compact sets preserves continuity, proving the assertion
+about $\delta$.
+\end{proof}
+
+\begin{proposition}[Inner and outer bounds]\label{prop:radial-bounds}
+For each of the three plane-orientation types,
+\begin{equation}\label{eq:modulus-bounds}
+\{p:r_1^2+r_2^2\ge1\}\ \subseteq\ \cM\ \subseteq\
+\{p:r_1+r_2\ge1\}.
+\end{equation}
+For real coefficients, in every plane-orientation type,
+\begin{equation}\label{eq:real-slice}
+\cM\cap(-1,1)^2=\{(a,b)\in(-1,1)^2:|a|+|b|\ge1\},
+\end{equation}
+with the understood exclusion of zero coefficients from $\mathcal P$.
+\end{proposition}
+
+\begin{proof}
+The diameter $D_K$ of $K_p$ is positive, by distinct fixed points.
+If the first two pieces intersect, their union has diameter at most
+the sum of their diameters. Thus
+$D_K\le(r_1+r_2)D_K$, proving the right-hand inclusion.
+
+For the other inclusion suppose the two pieces are disjoint, with
+distance $d>0$. Let $V(t)$ be the area of the open $t$-neighbourhood
+of $K_p$. For $0<t<d/2$ the two corresponding neighbourhoods of the
+pieces are disjoint, and similarity scaling gives
+\[
+V(t)=r_1^2V(t/r_1)+r_2^2V(t/r_2).
+\]
+For a nonempty compact planar set, $V(s)>V(t)$ whenever $s>t>0$.
+For example, take a point maximizing a linear coordinate on the
+compact set; a small open region beyond its $t$-supporting line lies
+in the $s$-neighbourhood but outside the $t$-neighbourhood. Since
+$r_j<1$, the displayed equality is incompatible with
+$r_1^2+r_2^2\ge1$. This proves the left-hand inclusion, including
+its equality case. It is the elementary area form of the usual
+similarity-dimension obstruction to strong separation.
+
+For real $a,b$, the real line is invariant and $K_p\subset\mathbb R$.
+Let $I$ be its convex hull. The intervals $S_1I,S_2I$ have lengths
+$r_1|I|,r_2|I|$, lie in $I$, and together have convex hull $I$.
+Neither interval can contain both endpoints of $I$, since $r_j<1$.
+Thus they cover $I$ exactly when $r_1+r_2\ge1$. In that case $I$
+is a compact invariant set and equals $K_p$. Otherwise their gap
+separates $S_1K_p$ from $S_2K_p$.
+\end{proof}
+
+In the atlas coordinates, these bounds read
+\begin{equation}\label{eq:rho-bounds}
+\rho\le2\sqrt{w^2+(1-w)^2}\ \Longrightarrow\ p\in\cM,
+\qquad
+p\in\cM\ \Longrightarrow\ \rho\le2.
+\end{equation}
+Both statements assume the strict contraction condition. Thus the
+possible transition region lies between these two radii; when
+$w=1/2$, they are $\sqrt2$ and $2$. This localization does not assert
+that membership is monotone along every radial line.
+
+The exact difference formulation is
+\begin{equation}\label{eq:honest-difference}
+D_p=aJ_{\kappa_1}(K_p)-bJ_{\kappa_2}(K_p),\qquad
+p\in\cM\ \Longleftrightarrow\ 2\in D_p.
+\end{equation}
+It follows by rearranging the equality of a point in each first-level
+piece. The product $K_p\times K_p$ is the attractor of the four
+product maps $S_i\times S_j$ on $\mathbb R^4$, and $D_p$ is its
+image under a real-linear projection. For unequal contraction factors
+the product maps are generally self-affine. The projection does not
+automatically provide a finite planar IFS for $D_p$: its evolving
+relative coefficients must also be tracked. Plane-orientation parity
+alone does not close that state space. Any finite graph-directed
+reduction requires a separate invariance argument.
+

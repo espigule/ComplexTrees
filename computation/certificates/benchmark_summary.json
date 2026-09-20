@@ -1,0 +1,71 @@
+{
+  "limits": {
+    "max_depth": 8,
+    "max_pairs": 20000
+  },
+  "results": [
+    {
+      "benchmark": "quarter_pp",
+      "excluded_leaf_pairs": 1,
+      "frontier_leaf_pairs": 0,
+      "maximum_depth": 1,
+      "result": "DISCONNECTED",
+      "split_pairs": 0,
+      "tested_pairs": 1
+    },
+    {
+      "benchmark": "imaginary_two_thirds_pp",
+      "excluded_leaf_pairs": 52,
+      "frontier_leaf_pairs": 0,
+      "maximum_depth": 6,
+      "result": "DISCONNECTED",
+      "split_pairs": 17,
+      "tested_pairs": 69
+    },
+    {
+      "benchmark": "imaginary_two_thirds_pm",
+      "excluded_leaf_pairs": 52,
+      "frontier_leaf_pairs": 0,
+      "maximum_depth": 6,
+      "result": "DISCONNECTED",
+      "split_pairs": 17,
+      "tested_pairs": 69
+    },
+    {
+      "benchmark": "imaginary_two_thirds_mm",
+      "excluded_leaf_pairs": 52,
+      "frontier_leaf_pairs": 0,
+      "maximum_depth": 6,
+      "result": "DISCONNECTED",
+      "split_pairs": 17,
+      "tested_pairs": 69
+    },
+    {
+      "benchmark": "interval_half_pp",
+      "excluded_leaf_pairs": 21,
+      "frontier_leaf_pairs": 1,
+      "maximum_depth": 8,
+      "result": "UNRESOLVED",
+      "split_pairs": 7,
+      "tested_pairs": 29
+    },
+    {
+      "benchmark": "interval_half_pm",
+      "excluded_leaf_pairs": 21,
+      "frontier_leaf_pairs": 1,
+      "maximum_depth": 8,
+      "result": "UNRESOLVED",
+      "split_pairs": 7,
+      "tested_pairs": 29
+    },
+    {
+      "benchmark": "interval_half_mm",
+      "excluded_leaf_pairs": 21,
+      "frontier_leaf_pairs": 1,
+      "maximum_depth": 8,
+      "result": "UNRESOLVED",
+      "split_pairs": 7,
+      "tested_pairs": 29
+    }
+  ]
+}

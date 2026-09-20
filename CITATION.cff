@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying preprint when using these research materials."
+type: software
+title: "Four-Dimensional Connectedness Atlas: Research Companion"
+authors:
+  - family-names: "Espigulé"
+    given-names: "Bernat"
+version: "1.0.0"
+date-released: "2026-09-20"
+repository-code: "https://github.com/espigule/ComplexTrees"
+url: "https://complextrees.com/4D/publication/"
+preferred-citation:
+  type: unpublished
+  title: "Four-Dimensional Connectedness Loci and Structural Stability for Planar Binary Similarities"
+  authors:
+    - family-names: "Espigulé"
+      given-names: "Bernat"
+  year: 2026
+  url: "https://complextrees.com/4D/publication/"
+  notes: "Author-released preprint. No arXiv or journal identifier assigned in this release."

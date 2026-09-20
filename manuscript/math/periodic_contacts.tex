@@ -1,0 +1,61 @@
+% Optional short section: exact contact seeds, with their core location proved.
+\subsection{Explicit eventually periodic contacts in the direct class}
+\label{sec:restored-periodic-contacts}
+
+Consider $f_-(z)=-1+az$ and $f_+(z)=1+bz$, with
+$0<|a|,|b|<1$. Their fixed points are
+$p_-=-1/(1-a)$ and $p_+=1/(1-b)$.
+
+\begin{proposition}[Cross-contact algebraic families]
+\label{prop:restored-periodic-contacts}
+For every integer $k\ge1$,
+\begin{equation}\label{eq:restored-periodic-criterion}
+ f_-^k(p_+)=f_+^k(p_-)
+ \quad\Longleftrightarrow\quad a^k+b^k=1.
+\end{equation}
+These parameter sets are smooth complex curves within the strict
+contraction bidisk and every attractor on them is connected.
+For $k\ge2$ they lie in the universal connected core
+$|a|^2+|b|^2\ge1$. For $k>2$ this inequality is strict, so all such
+parameters are in the interior of the full connectedness locus.
+For $k=2$, equality holds only for real $a,b$.
+\end{proposition}
+
+\begin{proof}
+Geometric summation and subtraction give
+\[
+ f_-^k(p_+)-f_+^k(p_-)
+ =-\frac{(a+b-2)(a^k+b^k-1)}{(1-a)(1-b)}.
+\]
+The denominator is nonzero, and $a+b\ne2$ in the strict contraction
+bidisk. The two points are coded by $-^k+^{\infty}$ and
+$+^k-^{\infty}$, respectively, so their equality gives first-piece
+contact. The gradient $(ka^{k-1},kb^{k-1})$ is nonzero, proving
+smoothness of the complex curve.
+
+If $a^k+b^k=1$, the triangle inequality gives
+$|a|^k+|b|^k\ge1$. For $k\ge2$ and both moduli strictly between
+zero and one,
+\[
+ |a|^2+|b|^2\ge |a|^k+|b|^k\ge1,
+\]
+with strictness in the first inequality for $k>2$.
+For $k=2$, equality throughout requires $a^2$ and $b^2$ to be
+nonnegative real numbers, hence $a,b$ to be real.
+\end{proof}
+
+In the atlas coordinates define
+\[
+ S_k(\alpha,w)=w^ke^{ik\alpha}+(1-w)^ke^{-ik\alpha}.
+\]
+Where $S_k\ne0$, the same contact curves have branches
+\[
+ \rho=2|S_k|^{1/k},\qquad
+ \gamma=\frac{\arg S_k+2\pi\ell}{k},
+ \quad \ell=0,\ldots,k-1,
+\]
+retaining only points with $\rho>2\max(w,1-w)$ and imposing the
+phase-lattice identifications. These are exact connected families
+with explicit contacts. For $k>2$ they cannot be frontier sheets;
+their role is to provide algebraic examples and contact seeds
+inside the connected region.

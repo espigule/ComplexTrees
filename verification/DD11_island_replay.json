@@ -1,0 +1,40 @@
+{
+  "source_sha256": "f239f2548f387d3afa97f1e5db76595283aa31b2b85003886e8b81ebdda06179",
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "compile_args": [
+    "g++",
+    "-O2",
+    "-std=c++17",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "figure_sources/zippers/certify_zipper_cells.cpp",
+    "-o",
+    "verification/certify_zipper_cells_review"
+  ],
+  "run_args": [
+    "verification/certify_zipper_cells_review",
+    "DD11",
+    "verification/DD11_island_replay.csv",
+    "1",
+    "200000",
+    "48",
+    "0.34090874998946674",
+    "0.34090875001857057",
+    "0.43484624999109656",
+    "0.43484625002020039"
+  ],
+  "result": {
+    "ix": "0",
+    "iy": "0",
+    "x0": "0.34090874998946674",
+    "x1": "0.34090875001857057",
+    "y0": "0.43484624999109656",
+    "y1": "0.43484625002020039",
+    "status": "1",
+    "visits": "35291",
+    "maxdepth": "36",
+    "minimum_squared_gap": "2.840563647172057e-13"
+  },
+  "scope": "Independent compilation and deterministic replay of renderer implementation, not an independent interval implementation. Return identities checked separately with exact integer polynomials.",
+  "command_directory": "Package root; paths adapted from the original independent run."
+}

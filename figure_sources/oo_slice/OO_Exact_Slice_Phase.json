@@ -1,0 +1,15 @@
+{
+  "physical_width_cm": 15.6,
+  "physical_height_cm": 9.5,
+  "font_sizes_pt": [
+    8.5,
+    9.0,
+    9.5
+  ],
+  "geometry": "Exact disks, closed real antenna segments and isolated radial values; no parameter classification by sampling.",
+  "strict_coefficient_domain": "0 < |a| < 1",
+  "connected_set": "|a| >= 1/sqrt(2), or a real and |a| >= 1/2",
+  "full_locus_boundary_in_each_slice": "|a| = 1/sqrt(2), or a real and 1/2 <= |a| <= 1/sqrt(2)",
+  "radial_ceiling": "R(theta)=2 for theta=0 mod pi; sqrt(2) otherwise",
+  "png_dpi": 300
+}
