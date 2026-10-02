@@ -1,72 +1,20 @@
-name: Verify scientific release and public links
-
+name: Verify retained scientific records and publication policy
 on:
   push:
     branches: [main]
-    paths-ignore: ['.github/workflows/publish-v1.yml']
   pull_request:
   workflow_dispatch:
-
 permissions:
   contents: read
-
 jobs:
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
-      - name: Verify the frozen scientific manifest
+      - name: Verify the scientific and publication manifests
         run: sha256sum --check --quiet MANIFEST.sha256
       - name: Replay independent exact-record checks
         run: python3 tools/check_release.py
-      - name: Check the deployed publication and existing explorers
-        shell: bash
-        run: |
-          python3 - <<'PY'
-          import hashlib, json, os, time, urllib.request
-          from pathlib import Path
-          from urllib.parse import urljoin
-          base='https://complextrees.com/4D/publication/'
-          title='Four-Dimensional Connectedness Loci and Structural Stability for Planar Binary Similarities'
-          def get(url):
-            error=None
-            for attempt in range(12):
-              try:
-                request=urllib.request.Request(url,headers={'User-Agent':'ConnectednessAtlasReleaseCheck/1.0','Cache-Control':'no-cache'})
-                with urllib.request.urlopen(request,timeout=60) as response:
-                  assert response.status==200
-                  return response.read()
-              except Exception as exc:
-                error=exc
-                if attempt<11:time.sleep(10)
-            raise RuntimeError(f'Public resource unavailable: {url}') from error
-          landing=get(base).decode('utf-8')
-          assert title in landing and 'Research release 1.0.0' in landing
-          assert 'citation_pdf_url' in landing and 'paper-source.zip' in landing
-          metadata=json.loads(get(base+'metadata.json'))
-          assert metadata['title']==title and metadata['arxiv_id'] is None
-          manifest=json.loads(get(base+'manifest.json'))
-          assert manifest['release']=='v1.0.0'
-          checked=[]
-          for filename,expected in [
-            ('paper.pdf','28f1015861b6418c250593e1a1c3f0eff422e6f9a3a6a484b4437aef8fd7dd39'),
-            ('poster.pdf','9fdf374d59bd5825e940a13a8527c26730d62e34f67040c994f0d7794f8a1b1f'),
-            ('zipper-atlas.html','363e3c7d606f9371c6d7b2299ad491026d7ce19fd47b6be9630012687d551868'),
-            ('paper-source.zip','cac65bfab1597a2aa6644f75560a04224e5261bf72f7f1ba17289a88cefc1402'),
-            ('poster-source.zip','140c6a2540e90d14a2dad8b2b86fab3e221976d0feb97dff7f6e8f36fece4369'),
-          ]:
-            data=get(base+filename)
-            assert hashlib.sha256(data).hexdigest()==expected, filename
-            checked.append({'url':base+filename,'bytes':len(data),'sha256':expected})
-          for path in ['/4D/','/4D/atlas/','/4D/lab/','/4D/docs/']:
-            page=get('https://complextrees.com'+path).decode('utf-8')
-            assert '<html' in page.lower()
-            if path=='/4D/':assert '/4D/publication/' in page and 'Read the paper' in page
-            checked.append({'url':'https://complextrees.com'+path,'status':200})
-          result={'status':'passed','publication':base,'checked':checked,'scope':'Live HTTP and byte-identity checks; exact-record tests run separately. Existing full-explorer controls were not browser-tested by this job.'}
-          print(json.dumps(result,indent=2))
-          Path('live-publication-check.json').write_text(json.dumps(result,indent=2)+'\n')
-          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
-            f.write('## Publication verified\n\nThe paper, poster, four-family explorer and source archives match the approved checksums. The full explorer, live atlas, laboratory and methods pages returned HTTP 200.\n')
-          PY
+      - name: Check approved public assets and withheld manuscripts
+        run: python3 tools/check_publication.py

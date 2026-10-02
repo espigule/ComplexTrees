@@ -1,19 +1,38 @@
 {
-  "title": "Four-Dimensional Connectedness Loci and Structural Stability for Planar Binary Similarities",
+  "updated": "2026-10-02",
   "author": "Bernat Espigulé",
   "affiliation": "Universitat de Girona",
-  "version": "1.0.0",
-  "release_date": "2026-09-20",
-  "manuscript_date": "2026-09-18",
-  "publication_status": "Author-released preprint; not a journal publication",
-  "arxiv_id": null,
-  "repository": "https://github.com/espigule/ComplexTrees",
   "publication_page": "https://complextrees.com/4D/publication/",
+  "manuscripts": [
+    {
+      "id": "4d-connectedness-2026",
+      "title": "Connectedness Loci for Pairs of Planar Similarities",
+      "title_status": "provisional",
+      "publication_status": "in preparation",
+      "pdf_available": false,
+      "url": "https://complextrees.com/4D/publication/#flagship"
+    },
+    {
+      "id": "4d-research-companion-2026",
+      "title": "Connectedness Loci for Pairs of Planar Similarities: Contact Families, Sections and Landmarks",
+      "title_status": "provisional",
+      "publication_status": "in preparation",
+      "pdf_available": false,
+      "url": "https://complextrees.com/4D/publication/#companion"
+    }
+  ],
+  "poster": {
+    "title": "Four-Dimensional Mandelbrot Sets for Binary Self-Similar Sets of the Plane",
+    "status": "submitted BMD 2026 poster",
+    "submitted": "2026-09-27",
+    "size_cm": [
+      70,
+      140
+    ],
+    "url": "https://complextrees.com/4D/publication/poster.pdf",
+    "sha256": "7fcba8b565c848c18a668c4b46f368079477179bef952ce578dafd01fdc8adc2"
+  },
   "explorer": "https://complextrees.com/4D/",
   "atlas": "https://complextrees.com/4D/atlas/",
-  "project": "PID2023-146424NB-I00",
-  "poster_size_cm": [
-    70,
-    140
-  ]
+  "project": "PID2023-146424NB-I00"
 }

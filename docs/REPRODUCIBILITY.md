@@ -1,9 +1,9 @@
 # Reproducibility
 
-The article and poster compile using their included figures. A suitable TeX installation supplies the standard TeX fonts. The repository does not include font files.
+The manuscript and companion are in preparation. Their PDF and LaTeX sources are withheld pending author review. The submitted poster PDF is retained as the approved print artifact; the superseded poster sources have been removed from the current tree.
 
-Run `python3 tools/check_release.py` to verify all seven stored finite-exclusion benchmarks and run the finite exact-algebra tests. Their claims are explicitly bounded; these checks are not a new referee report or proof-assistant formalization.
+Run `python3 tools/check_release.py` to verify all seven stored finite-exclusion benchmarks and the finite exact-algebra checks. These are bounded scientific checks, not manuscript review or a proof-assistant formalization.
 
-To redraw selected stable surfaces, install the scientific Python requirements and run `python3 figure_sources/four_families/build_four_family_figures.py`. To rebuild the offline page, run `python3 interactive/build_interactive.py`. Positive interval cells and curve source data are retained; blank regions are not recoded as unstable.
+The existing `figure_sources/`, `computation/` and `verification/` records are unchanged. Install `requirements.txt` and run `python3 figure_sources/four_families/build_four_family_figures.py` to redraw selected stable surfaces. Run `python3 interactive/build_interactive.py` to rebuild the offline viewer. Positive interval cells retain their original scope; blank regions are not classified as unstable.
 
-The central atlas image comes from a finite DD survey. Reconstructing labels and specimen panels does not repeat or refine that parameter survey. The continuously developed full explorer remains at complextrees.com/4D/ and is separate from this frozen experiment.
+The full explorer at https://complextrees.com/4D/ develops separately from this preserved numerical experiment.

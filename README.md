@@ -1,44 +1,29 @@
-# Four-Dimensional Connectedness Loci
+# Connectedness Loci for Pairs of Planar Similarities
 
-**Four-Dimensional Connectedness Loci and Structural Stability for Planar Binary Similarities**  
-Bernat Espigulé · Universitat de Girona · Research companion v1.0.0
+Bernat Espigulé · Universitat de Girona
 
-[Paper](publications/Four_Dimensional_Connectedness_Loci.pdf) · [BMD poster](publications/BMD2026_Poster.pdf) · [Live explorer](https://complextrees.com/4D/) · [Navigable atlas](https://complextrees.com/4D/atlas/) · [Downloads](https://github.com/espigule/ComplexTrees/releases/tag/v1.0.0)
+[Explorer](https://complextrees.com/4D/) · [Atlas](https://complextrees.com/4D/atlas/) · [Submitted BMD 2026 poster](publications/BMD2026_Poster.pdf) · [Manuscripts and citations](https://complextrees.com/4D/publication/)
 
-![Four zipper families: exterior slices and linked curves](assets/zipper-stable-slices.png)
+## Manuscripts in preparation
 
-## Research
+The main article, *Connectedness Loci for Pairs of Planar Similarities*, studies the parameter space, connectedness, symbolic contacts and exact families of planar similarity pairs.
 
-A common framework for the DD, DO and OO orientation types of planar binary similarities, fixed-address contact fibres, exact phase families and stable zipper slices. Structural stability is defined relative to a specified parameter family: the full coding relation has no identifications beyond those forced throughout that family. This definition does not by itself assert ambient openness or perturbative dynamical stability.
+The research companion, *Connectedness Loci for Pairs of Planar Similarities: Contact Families, Sections and Landmarks*, develops the contact families, selected sections and landmarks alongside the computational atlas.
 
-The visual selection is **DD(1,0), DD(1,1), DO(1,0), DO(1,1)**, with three shared curve parameters per family. The reflected DD(0,1) presentation is omitted from the figures. Exterior coefficients have moduli greater than one; colour retains contraction weight in the three-dimensional projection.
+Both titles are provisional. The earlier draft has been removed from current distribution pending author review. PDFs and manuscript sources will be released only after the author has reviewed and approved the exact versions.
 
-**Publication status:** author-released preprint and research companion. No arXiv identifier or journal acceptance is asserted. The record will be updated after an announcement.
+Provisional citations are available in [BibTeX](citation.bib) and [LaTeX bibitem](bibitems.tex) formats, explicitly marked as work in preparation.
 
-## Explore and reproduce
+## Submitted poster
 
-The established website hosts the [full explorer](https://complextrees.com/4D/), [six-point atlas](https://complextrees.com/4D/atlas/), [laboratory](https://complextrees.com/4D/lab/) and [mathematical guide](https://complextrees.com/4D/docs/).
+*Four-Dimensional Mandelbrot Sets for Binary Self-Similar Sets of the Plane*. Submitted to Barcelona Mathematical Days on 27 September 2026; 70 × 140 cm.
 
-`interactive/Four_Family_Stable_Atlas.html` is a self-contained offline four-family explorer. Download it and open it in a modern browser, or serve the repository using `python3 -m http.server 8000`. Its data and twelve curve examples are embedded.
+The PDF is the submitted print version. Its SHA-256 digest is `7fcba8b565c848c18a668c4b46f368079477179bef952ce578dafd01fdc8adc2`.
 
-```sh
-(cd manuscript && pdflatex -interaction=nonstopmode -halt-on-error main.tex && pdflatex -interaction=nonstopmode -halt-on-error main.tex)
-(cd poster && lualatex -interaction=nonstopmode -halt-on-error BMD2026_Connectedness_Atlas.tex && lualatex -interaction=nonstopmode -halt-on-error BMD2026_Connectedness_Atlas.tex)
-python3 tools/check_release.py
-```
+## Computational resources
 
-`figure_sources/` contains generators and data, including the positive zipper-cell records and selected curve samples. `computation/` contains rational finite-exclusion certificates and an independent verifier. `verification/` contains finite algebra checks with their specified scope. All figures needed to compile the documents are included.
+The [mathematical guide](https://complextrees.com/4D/docs/) records parameter conventions and evidence categories. `interactive/Four_Family_Stable_Atlas.html` is the retained offline four-family viewer.
 
-See [reproducibility](docs/REPRODUCIBILITY.md), [conventions](docs/CONVENTIONS.md), [rights](RIGHTS.md), and the [submission metadata](ARXIV_SUBMISSION.md). No font files are distributed.
+`figure_sources/`, `computation/` and `verification/` retain the numerical data, rational certificates and bounded algebra checks. Run `python3 tools/check_release.py` to replay the stored scientific checks. Finite numerical survival is not a connectedness certificate. See [reproducibility](docs/REPRODUCIBILITY.md), [conventions](docs/CONVENTIONS.md) and [rights](RIGHTS.md).
 
-## Cite
-
-Use `CITATION.cff` or `citation.bib`. The citation does not invent an arXiv or journal identifier.
-
-## Background and support
-
-[Doctoral thesis](https://complextrees.com/research/thesis/): *Collinear Fractals and Connectedness Loci: Topology, Finite Capture, and Restricted Polynomial Roots*, Universitat de Girona, submitted 2026. Earlier complex-tree work and its relation to this atlas are documented in the paper.
-
-Supported by the Spanish Ministerio de Ciencia, Innovación y Universidades through project **PID2023-146424NB-I00**.
-
-Research and original interactive designs © Bernat Espigulé. Third-party notices remain applicable. No new open-source or Creative Commons licence is assigned by this release.
+Supported by project PID2023-146424NB-I00. Research and original interactive designs © Bernat Espigulé. Existing third-party rights remain applicable.
